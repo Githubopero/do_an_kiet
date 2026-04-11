@@ -1,0 +1,6 @@
+@Web_ban_xe_VinFast_HostAddress = http://localhost:5130
+
+GET {{Web_ban_xe_VinFast_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
