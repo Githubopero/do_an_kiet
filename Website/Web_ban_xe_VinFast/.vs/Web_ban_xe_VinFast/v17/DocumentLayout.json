@@ -1,225 +1,225 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\",
+  "WorkspaceRootPath": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\implementations\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\iusermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iusermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\admin\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\controllers\\dealercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\dealercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\implementations\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\implementations\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\implementations\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\carconfigurationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\carconfigurationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\dealer\\customerdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\customerdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\implementations\\admindashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\admindashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\iadmindashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iadmindashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\admin\\createcarrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\createcarrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\admin\\dashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\dashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\admin\\topcardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\topcardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\admin\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\idealerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\idealerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\dealer\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\order\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\dealer\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\order\\customerinforequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\customerinforequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\dealer\\dealerorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\dealerorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\dealer\\updatestatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\updatestatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\order\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\helpers\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:helpers\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\helpers\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:helpers\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\order\\checkoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\checkoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\order\\addtocartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\addtocartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\implementations\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\implementations\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\implementations\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\implementations\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\implementations\\admindashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\implementations\\admindashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\helpers\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:helpers\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\iusermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iusermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\admin\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\controllers\\dealercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\dealercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\car\\carconfigurationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\carconfigurationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\dealer\\customerdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\customerdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\iadmindashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iadmindashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\admin\\createcarrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\createcarrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\admin\\dashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\dashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\admin\\topcardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\topcardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\admin\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\admin\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\idealerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\idealerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\dealer\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\order\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\dealer\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\order\\customerinforequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\customerinforequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\dealer\\dealerorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\dealerorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\dealer\\updatestatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\dealer\\updatestatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\order\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\helpers\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:helpers\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\order\\checkoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\checkoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\order\\addtocartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\order\\addtocartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\carlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\car\\carlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\carlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\carfilterparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\car\\carfilterparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\carfilterparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\pricedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\car\\pricedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\pricedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\configpricerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\car\\configpricerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\configpricerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\cardetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\car\\cardetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\cardetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\carimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\car\\carimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\carimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\carversiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\car\\carversiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\carversiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\dtos\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\web_ban_xe_vinfast.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\web_ban_xe_vinfast.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:web_ban_xe_vinfast.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\models\\vinfastdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\documents\\github\\do_an_kiet\\website\\web_ban_xe_vinfast\\models\\vinfastdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:models\\vinfastdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -230,132 +230,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateUserRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateUserRequest.cs",
-              "RelativeDocumentMoniker": "DTOs\\Admin\\CreateUserRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateUserRequest.cs",
-              "RelativeToolTip": "DTOs\\Admin\\CreateUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CartService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\CartService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CartService.cs",
+              "RelativeToolTip": "Services\\Implementations\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T10:10:10.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\AuthService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AuthService.cs",
-              "RelativeToolTip": "Services\\Implementations\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:04:12.018Z",
+              "WhenOpened": "2026-04-04T11:47:34.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\OrderService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\OrderService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\OrderService.cs",
-              "RelativeToolTip": "Services\\Implementations\\OrderService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAKsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:49:54.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAkwDsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:18:52.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\CartController.cs",
-              "RelativeToolTip": "Controllers\\CartController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:15:03.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUserManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IUserManagementService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IUserManagementService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IUserManagementService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IUserManagementService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:03:06.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\UserManagementService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\UserManagementService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\UserManagementService.cs",
-              "RelativeToolTip": "Services\\Implementations\\UserManagementService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:29:47.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "InventoryService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\InventoryService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\InventoryService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\InventoryService.cs",
-              "RelativeToolTip": "Services\\Implementations\\InventoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:42:36.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IInventoryService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IInventoryService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IInventoryService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IInventoryService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IInventoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:40:15.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "CarService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CarService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CarService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CarService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CarService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CarService.cs",
               "RelativeToolTip": "Services\\Implementations\\CarService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -364,310 +260,429 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DealerController.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\DealerController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DealerController.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\DealerController.cs",
-              "RelativeToolTip": "Controllers\\DealerController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:18:20.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CustomerService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CustomerService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CustomerService.cs",
               "RelativeToolTip": "Services\\Implementations\\CustomerService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCgAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-04T13:44:35.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CartService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CartService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\CartService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CartService.cs",
-              "RelativeToolTip": "Services\\Implementations\\CartService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "InventoryService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\InventoryService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\InventoryService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\InventoryService.cs",
+              "RelativeToolTip": "Services\\Implementations\\InventoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:47:34.266Z",
+              "WhenOpened": "2026-04-04T13:42:36.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\OrderService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\OrderService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\OrderService.cs",
+              "RelativeToolTip": "Services\\Implementations\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:17:29.721Z",
+              "WhenOpened": "2026-04-04T11:49:54.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CarController.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\CarController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CarController.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\CarController.cs",
-              "RelativeToolTip": "Controllers\\CarController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UserManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\UserManagementService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\UserManagementService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\UserManagementService.cs",
+              "RelativeToolTip": "Services\\Implementations\\UserManagementService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:14:07.691Z",
+              "WhenOpened": "2026-04-11T09:29:47.822Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwB8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:01:23.161Z",
+              "WhenOpened": "2026-04-04T12:52:59.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CarConfigurationDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarConfigurationDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Car\\CarConfigurationDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarConfigurationDto.cs",
-              "RelativeToolTip": "DTOs\\Car\\CarConfigurationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:08:23.995Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-04T12:44:47.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IOrderService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IOrderService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IOrderService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABaAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\AuthService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AuthService.cs",
+              "RelativeToolTip": "Services\\Implementations\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:49:34.228Z",
+              "WhenOpened": "2026-04-04T11:04:12.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ICustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICustomerService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\ICustomerService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICustomerService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\ICustomerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:40:32.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CustomerDetailDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDetailDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Dealer\\CustomerDetailDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDetailDto.cs",
-              "RelativeToolTip": "DTOs\\Dealer\\CustomerDetailDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:39:55.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 9,
               "Title": "AdminDashboardService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AdminDashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AdminDashboardService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\AdminDashboardService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AdminDashboardService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AdminDashboardService.cs",
               "RelativeToolTip": "Services\\Implementations\\AdminDashboardService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T09:31:45.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CreateCarRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateCarRequest.cs",
-              "RelativeDocumentMoniker": "DTOs\\Admin\\CreateCarRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateCarRequest.cs",
-              "RelativeToolTip": "DTOs\\Admin\\CreateCarRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABBAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "JwtHelper.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Helpers\\JwtHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\JwtHelper.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Helpers\\JwtHelper.cs",
+              "RelativeToolTip": "Helpers\\JwtHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T12:50:38.253Z",
+              "WhenOpened": "2026-04-04T12:43:45.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "DashboardDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\DashboardDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Admin\\DashboardDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\DashboardDto.cs",
-              "RelativeToolTip": "DTOs\\Admin\\DashboardDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABEAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwDsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:28:27.643Z",
+              "WhenOpened": "2026-04-04T11:18:52.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "TopCarDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\TopCarDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Admin\\TopCarDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\TopCarDto.cs",
-              "RelativeToolTip": "DTOs\\Admin\\TopCarDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "IUserManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IUserManagementService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IUserManagementService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IUserManagementService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IUserManagementService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:28:44.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T13:03:06.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\UserDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Admin\\UserDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\UserDto.cs",
-              "RelativeToolTip": "DTOs\\Admin\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:28:14.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:15:03.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateUserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateUserRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Admin\\CreateUserRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateUserRequest.cs",
+              "RelativeToolTip": "DTOs\\Admin\\CreateUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T10:10:10.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IInventoryService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IInventoryService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IInventoryService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IInventoryService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IInventoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T13:40:15.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DealerController.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\DealerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DealerController.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\DealerController.cs",
+              "RelativeToolTip": "Controllers\\DealerController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T11:18:20.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T11:17:29.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CarController.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\CarController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CarController.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\CarController.cs",
+              "RelativeToolTip": "Controllers\\CarController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T11:14:07.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T11:01:23.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CarConfigurationDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarConfigurationDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Car\\CarConfigurationDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarConfigurationDto.cs",
+              "RelativeToolTip": "DTOs\\Car\\CarConfigurationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T11:08:23.995Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "IAdminDashboardService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAdminDashboardService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IAdminDashboardService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAdminDashboardService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IAdminDashboardService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T12:52:41.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:49:34.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ICustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICustomerService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ICustomerService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICustomerService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ICustomerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T13:40:32.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CustomerDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDetailDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Dealer\\CustomerDetailDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDetailDto.cs",
+              "RelativeToolTip": "DTOs\\Dealer\\CustomerDetailDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T09:39:55.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CreateCarRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateCarRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Admin\\CreateCarRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateCarRequest.cs",
+              "RelativeToolTip": "DTOs\\Admin\\CreateCarRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T12:50:38.253Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "IDealerService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IDealerService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IDealerService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IDealerService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IDealerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Title": "DashboardDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\DashboardDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Admin\\DashboardDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\DashboardDto.cs",
+              "RelativeToolTip": "DTOs\\Admin\\DashboardDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:21:34.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:28:27.643Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "InventoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\InventoryDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Dealer\\InventoryDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\InventoryDto.cs",
-              "RelativeToolTip": "DTOs\\Dealer\\InventoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Title": "TopCarDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\TopCarDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Admin\\TopCarDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\TopCarDto.cs",
+              "RelativeToolTip": "DTOs\\Admin\\TopCarDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:17:34.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:28:44.587Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "OrderItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderItemDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Order\\OrderItemDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderItemDto.cs",
-              "RelativeToolTip": "DTOs\\Order\\OrderItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\UserDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Admin\\UserDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\UserDto.cs",
+              "RelativeToolTip": "DTOs\\Admin\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:16:58.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:28:14.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IAdminDashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAdminDashboardService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IAdminDashboardService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAdminDashboardService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IAdminDashboardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T12:52:41.496Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "CustomerDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Dealer\\CustomerDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDto.cs",
-              "RelativeToolTip": "DTOs\\Dealer\\CustomerDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
+              "Title": "IDealerService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IDealerService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IDealerService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IDealerService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IDealerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:17:51.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:21:34.369Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "CustomerInfoRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CustomerInfoRequest.cs",
-              "RelativeDocumentMoniker": "DTOs\\Order\\CustomerInfoRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CustomerInfoRequest.cs",
-              "RelativeToolTip": "DTOs\\Order\\CustomerInfoRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "Title": "InventoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\InventoryDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Dealer\\InventoryDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\InventoryDto.cs",
+              "RelativeToolTip": "DTOs\\Dealer\\InventoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:16:16.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:17:34.881Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "DealerOrderDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\DealerOrderDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Dealer\\DealerOrderDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\DealerOrderDto.cs",
-              "RelativeToolTip": "DTOs\\Dealer\\DealerOrderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Title": "OrderItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderItemDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Order\\OrderItemDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderItemDto.cs",
+              "RelativeToolTip": "DTOs\\Order\\OrderItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:17:08.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:16:58.268Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "UpdateStatusRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\UpdateStatusRequest.cs",
-              "RelativeDocumentMoniker": "DTOs\\Dealer\\UpdateStatusRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\UpdateStatusRequest.cs",
-              "RelativeToolTip": "DTOs\\Dealer\\UpdateStatusRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA9AAAAAAAAAA==",
+              "Title": "CustomerDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Dealer\\CustomerDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDto.cs",
+              "RelativeToolTip": "DTOs\\Dealer\\CustomerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:18:06.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:17:51.963Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
+              "Title": "CustomerInfoRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CustomerInfoRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Order\\CustomerInfoRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CustomerInfoRequest.cs",
+              "RelativeToolTip": "DTOs\\Order\\CustomerInfoRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T11:16:16.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DealerOrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\DealerOrderDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Dealer\\DealerOrderDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\DealerOrderDto.cs",
+              "RelativeToolTip": "DTOs\\Dealer\\DealerOrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T09:17:08.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UpdateStatusRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\UpdateStatusRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Dealer\\UpdateStatusRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\UpdateStatusRequest.cs",
+              "RelativeToolTip": "DTOs\\Dealer\\UpdateStatusRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T09:18:06.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "OrderDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\OrderDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderDto.cs",
               "RelativeToolTip": "DTOs\\Order\\OrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -675,11 +690,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "ClaimsPrincipalExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Helpers\\ClaimsPrincipalExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Helpers\\ClaimsPrincipalExtensions.cs",
               "RelativeDocumentMoniker": "Helpers\\ClaimsPrincipalExtensions.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Helpers\\ClaimsPrincipalExtensions.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Helpers\\ClaimsPrincipalExtensions.cs",
               "RelativeToolTip": "Helpers\\ClaimsPrincipalExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -687,35 +702,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAwwBcAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T12:52:59.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "JwtHelper.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Helpers\\JwtHelper.cs",
-              "RelativeDocumentMoniker": "Helpers\\JwtHelper.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Helpers\\JwtHelper.cs",
-              "RelativeToolTip": "Helpers\\JwtHelper.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T12:43:45.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "ICartService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICartService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICartService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICartService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICartService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICartService.cs",
               "RelativeToolTip": "Services\\Interfaces\\ICartService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -723,11 +714,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "CheckoutRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CheckoutRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CheckoutRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\CheckoutRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CheckoutRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CheckoutRequest.cs",
               "RelativeToolTip": "DTOs\\Order\\CheckoutRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -735,11 +726,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "AddToCartRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\AddToCartRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\AddToCartRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\AddToCartRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\AddToCartRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\AddToCartRequest.cs",
               "RelativeToolTip": "DTOs\\Order\\AddToCartRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -747,11 +738,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "ICarService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICarService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICarService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICarService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICarService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICarService.cs",
               "RelativeToolTip": "Services\\Interfaces\\ICarService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -759,23 +750,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-04T12:44:47.918Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 42,
               "Title": "AuthResponse.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\AuthResponse.cs",
               "RelativeDocumentMoniker": "DTOs\\Auth\\AuthResponse.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\AuthResponse.cs",
               "RelativeToolTip": "DTOs\\Auth\\AuthResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -785,9 +764,9 @@
               "$type": "Document",
               "DocumentIndex": 44,
               "Title": "CarListDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarListDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarListDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarListDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarListDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarListDto.cs",
               "RelativeToolTip": "DTOs\\Car\\CarListDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -797,9 +776,9 @@
               "$type": "Document",
               "DocumentIndex": 43,
               "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAuthService.cs",
               "RelativeToolTip": "Services\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -809,9 +788,9 @@
               "$type": "Document",
               "DocumentIndex": 45,
               "Title": "CarFilterParams.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarFilterParams.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarFilterParams.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarFilterParams.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarFilterParams.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarFilterParams.cs",
               "RelativeToolTip": "DTOs\\Car\\CarFilterParams.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -821,9 +800,9 @@
               "$type": "Document",
               "DocumentIndex": 46,
               "Title": "PriceDetailDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\PriceDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\PriceDetailDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\PriceDetailDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\PriceDetailDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\PriceDetailDto.cs",
               "RelativeToolTip": "DTOs\\Car\\PriceDetailDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -833,9 +812,9 @@
               "$type": "Document",
               "DocumentIndex": 47,
               "Title": "ConfigPriceRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\ConfigPriceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\ConfigPriceRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\ConfigPriceRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\ConfigPriceRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\ConfigPriceRequest.cs",
               "RelativeToolTip": "DTOs\\Car\\ConfigPriceRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -845,9 +824,9 @@
               "$type": "Document",
               "DocumentIndex": 49,
               "Title": "CarImageDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarImageDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarImageDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarImageDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarImageDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarImageDto.cs",
               "RelativeToolTip": "DTOs\\Car\\CarImageDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -857,9 +836,9 @@
               "$type": "Document",
               "DocumentIndex": 50,
               "Title": "CarVersionDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarVersionDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarVersionDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarVersionDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarVersionDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarVersionDto.cs",
               "RelativeToolTip": "DTOs\\Car\\CarVersionDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -869,9 +848,9 @@
               "$type": "Document",
               "DocumentIndex": 48,
               "Title": "CarDetailDto.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarDetailDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarDetailDto.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarDetailDto.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarDetailDto.cs",
               "RelativeToolTip": "DTOs\\Car\\CarDetailDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -881,9 +860,9 @@
               "$type": "Document",
               "DocumentIndex": 51,
               "Title": "LoginRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\LoginRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Auth\\LoginRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\LoginRequest.cs",
               "RelativeToolTip": "DTOs\\Auth\\LoginRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -893,9 +872,9 @@
               "$type": "Document",
               "DocumentIndex": 52,
               "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Auth\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\RegisterRequest.cs",
               "RelativeToolTip": "DTOs\\Auth\\RegisterRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -905,9 +884,9 @@
               "$type": "Document",
               "DocumentIndex": 53,
               "Title": "Web_ban_xe_VinFast.csproj",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
               "RelativeDocumentMoniker": "Web_ban_xe_VinFast.csproj",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
               "RelativeToolTip": "Web_ban_xe_VinFast.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -917,9 +896,9 @@
               "$type": "Document",
               "DocumentIndex": 54,
               "Title": "VinFastDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\VinFastDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Models\\VinFastDbContext.cs",
               "RelativeDocumentMoniker": "Models\\VinFastDbContext.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\VinFastDbContext.cs",
+              "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Models\\VinFastDbContext.cs",
               "RelativeToolTip": "Models\\VinFastDbContext.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAA8wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

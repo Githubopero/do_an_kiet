@@ -1,6 +1,11 @@
-
+﻿using System.Text;
 using Web_ban_xe_VinFast.Services.Implementations;
 using Web_ban_xe_VinFast.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Web_ban_xe_VinFast.Models;
+using Microsoft.OpenApi.Models;
 
 namespace Web_ban_xe_VinFast
 {
@@ -17,11 +22,43 @@ namespace Web_ban_xe_VinFast
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // ====================== ĐĂNG KÝ DbContext ======================
+            builder.Services.AddDbContext<VinFastDbContext>(options =>
+            {
+                options.UseMySql(
+                    builder.Configuration.GetConnectionString("DefaultConnection"),
+                    ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+                );
+            });
 
+            // ===== Register Services =====
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<ICarService, CarService>();
+            builder.Services.AddScoped<ICartService, CartService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
+            builder.Services.AddScoped<IInventoryService, InventoryService>();
+            builder.Services.AddScoped<ICustomerService, CustomerService>();
+            builder.Services.AddScoped<IUserManagementService, UserManagementService>();
+            builder.Services.AddScoped<IAdminDashboardService, AdminDashboardService>();
 
-            //builder.Services.AddScoped<ICarService, CarService>();
-            //builder.Services.AddScoped<IUserManagementService, UserManagementService>();
-            //builder.Services.AddScoped<IAdminDashboardService, AdminDashboardService>();
+            // ===== JWT Authentication =====
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidAudience = builder.Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+                            builder.Configuration["Jwt:Key"] ?? "SuperSecretKey123!@#SuperSecretKey123!@#"))
+                    };
+                });
+
+            builder.Services.AddAuthorization();
 
             var app = builder.Build();
 

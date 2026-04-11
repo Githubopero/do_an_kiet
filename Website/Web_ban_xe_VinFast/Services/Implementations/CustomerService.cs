@@ -5,7 +5,7 @@ using Web_ban_xe_VinFast.Services.Interfaces;
 
 namespace Web_ban_xe_VinFast.Services.Implementations
 {
-    public class CustomerService
+    public class CustomerService : ICustomerService
     {
         private readonly VinFastDbContext _context;
 

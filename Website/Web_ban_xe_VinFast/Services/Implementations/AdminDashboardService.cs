@@ -1,10 +1,12 @@
 ﻿using Web_ban_xe_VinFast.DTOs.Admin;
 using Web_ban_xe_VinFast.Models;
 using Microsoft.EntityFrameworkCore;
+using Web_ban_xe_VinFast.Services.Interfaces;
+
 
 namespace Web_ban_xe_VinFast.Services.Implementations
 {
-    public class AdminDashboardService
+    public class AdminDashboardService:IAdminDashboardService
     {
         private readonly VinFastDbContext _context;
 

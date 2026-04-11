@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Web_ban_xe_VinFast")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98d90ef4c6258781c96fbacba9c61fa9527ab2e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Web_ban_xe_VinFast")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Web_ban_xe_VinFast")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
