@@ -41,6 +41,30 @@ namespace Web_ban_xe_VinFast
             builder.Services.AddScoped<IUserManagementService, UserManagementService>();
             builder.Services.AddScoped<IAdminDashboardService, AdminDashboardService>();
 
+
+            // Trong builder.Services
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
+            // ====================== CORS CONFIG ======================
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173")   // Port của React
+                          .AllowAnyMethod()
+                          .AllowAnyHeader()
+                          .AllowCredentials();                    // Quan trọng
+                });
+            });
+
             // ===== JWT Authentication =====
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -60,19 +84,30 @@ namespace Web_ban_xe_VinFast
 
             builder.Services.AddAuthorization();
 
+
+            
+
             var app = builder.Build();
+
+            
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.UseDeveloperExceptionPage();
+
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseCors("AllowFrontend");
 
+
+            app.UseAuthentication();
             app.UseAuthorization();
-
+            
 
             app.MapControllers();
 

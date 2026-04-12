@@ -242,8 +242,7 @@
               "RelativeToolTip": "Services\\Implementations\\CartService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:47:34.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:47:34.266Z"
             },
             {
               "$type": "Document",
@@ -255,8 +254,7 @@
               "RelativeToolTip": "Services\\Implementations\\CarService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:41:09.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:41:09.839Z"
             },
             {
               "$type": "Document",
@@ -268,8 +266,7 @@
               "RelativeToolTip": "Services\\Implementations\\CustomerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:44:35.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T13:44:35.714Z"
             },
             {
               "$type": "Document",
@@ -281,8 +278,7 @@
               "RelativeToolTip": "Services\\Implementations\\InventoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:42:36.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T13:42:36.057Z"
             },
             {
               "$type": "Document",
@@ -294,8 +290,7 @@
               "RelativeToolTip": "Services\\Implementations\\OrderService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:49:54.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:49:54.438Z"
             },
             {
               "$type": "Document",
@@ -307,8 +302,7 @@
               "RelativeToolTip": "Services\\Implementations\\UserManagementService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:29:47.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:29:47.822Z"
             },
             {
               "$type": "Document",
@@ -320,8 +314,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAQwB8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T12:52:59.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T12:52:59.275Z"
             },
             {
               "$type": "Document",
@@ -331,7 +324,7 @@
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-04-04T12:44:47.918Z",
               "EditorCaption": ""
@@ -346,8 +339,7 @@
               "RelativeToolTip": "Services\\Implementations\\AuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:04:12.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:04:12.018Z"
             },
             {
               "$type": "Document",
@@ -359,8 +351,7 @@
               "RelativeToolTip": "Services\\Implementations\\AdminDashboardService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:31:45.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:31:45.384Z"
             },
             {
               "$type": "Document",
@@ -372,8 +363,7 @@
               "RelativeToolTip": "Helpers\\JwtHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T12:43:45.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T12:43:45.363Z"
             },
             {
               "$type": "Document",
@@ -385,8 +375,7 @@
               "RelativeToolTip": "Controllers\\AdminController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwDsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:18:52.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:18:52.768Z"
             },
             {
               "$type": "Document",
