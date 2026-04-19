@@ -42,7 +42,7 @@ export default function DealerOrders() {
 
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <table className="w-full">
-          <thead className="bg-gray-100">
+          <thead className="bg-orange-300">
             <tr>
               <th className="p-4 text-left">Mã ĐH</th>
               <th className="p-4 text-left">Khách hàng</th>

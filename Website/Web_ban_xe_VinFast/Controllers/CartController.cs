@@ -27,7 +27,22 @@ namespace Web_ban_xe_VinFast.Controllers
 
         [HttpGet]
         public async Task<IActionResult> GetCart()
-            => Ok(await _cartService.GetCartAsync(User.GetUserId()));
+        {
+            try
+            {
+                var userId = User.GetUserId();
+                if (userId <= 0)
+                    return Unauthorized(new { message = "Vui lòng đăng nhập lại" });
+
+                var cart = await _cartService.GetCartAsync(userId);
+                return Ok(cart);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR Cart] {ex.Message}");
+                return StatusCode(500, new { message = "Không thể tải giỏ hàng" });
+            }
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveItem(long id)

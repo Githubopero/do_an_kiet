@@ -5,25 +5,42 @@ export default function Navbar() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    if (window.confirm('Bạn có chắc muốn đăng xuất?')) {
+      logout();
+      navigate('/login');
+    }
+  };
+
   return (
-    <nav className="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow-md">
-      <div className="flex items-center gap-6">
-        <Link to="/" className="text-2xl font-bold">VinFast</Link>
-        
-        {user && (
-          <div className="flex gap-6 text-sm">
-            {user.vaiTro === 'Customer' && <Link to="/customer" className="hover:underline">Mua Xe</Link>}
-            {user.vaiTro === 'DealerStaff' && <Link to="/dealer/orders" className="hover:underline">Đơn hàng</Link>}
-            {user.vaiTro === 'Admin' && <Link to="/admin/dashboard" className="hover:underline">Dashboard</Link>}
+    <nav className="bg-orange-300 text-black px-6 py-4 flex justify-between items-center shadow-md">
+      <div className="flex items-center gap-8">
+        <img 
+              src={"https://vectorseek.com/wp-content/uploads/2023/08/Vinfast-Logo-Vector.svg-.png"}
+              className="w-10" 
+            />
+        <Link to="/" className="text-3xl font-bold">VinFast</Link>
+
+        {/* Customer Navbar */}
+        {user?.vaiTro === 'Customer' && (
+          <div className="flex gap-6 text-sm font-medium">
+            <Link to="/customer" className="hover:underline">Mua Xe</Link>
+            <Link to="/customer/cart" className="hover:underline">Giỏ hàng</Link>
+            <Link to="/customer/orders" className="hover:underline">Đơn hàng của tôi</Link>
+            <Link to="/customer/consultation" className="hover:underline">
+              Yêu cầu tư vấn
+            </Link>
           </div>
         )}
+
+        {/* Dealer & Admin sẽ dùng Sidebar riêng */}
       </div>
 
       <div className="flex items-center gap-4">
-        {user && <span>Xin chào, {user.hoTen}</span>}
+        {user && <span className="text-sm">Xin chào, {user.hoTen}</span>}
         <button
-          onClick={() => { logout(); navigate('/login'); }}
-          className="bg-white text-blue-600 px-5 py-2 rounded-lg font-medium hover:bg-gray-100"
+          onClick={handleLogout}
+          className="bg-white text-black-600 px-5 py-2 rounded-lg font-medium hover:bg-gray-100 transition"
         >
           Đăng xuất
         </button>

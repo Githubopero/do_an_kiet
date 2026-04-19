@@ -16,11 +16,11 @@ export default function UsersManagement() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-8">Quản lý Người dùng</h1>
+      <h1 className="text-3xl font-bold mb-8">Quản lý người dùng</h1>
 
       <div className="bg-white rounded-2xl shadow overflow-hidden">
         <table className="w-full">
-          <thead className="bg-gray-100">
+          <thead className="bg-orange-300">
             <tr>
               <th className="p-4 text-left">Họ tên</th>
               <th className="p-4 text-left">Email</th>

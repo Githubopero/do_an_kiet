@@ -12,7 +12,7 @@ namespace Web_ban_xe_VinFast.Services.Implementations
 
         public AdminDashboardService(VinFastDbContext context) => _context = context;
 
-        public async Task<DashboardDto> GetDashboardDataAsync(string filter)
+        public async Task<DashboardDto> GetDashboardDataAsync(string? filter)
         {
             var orders = await _context.Orders.ToListAsync();
 
@@ -28,6 +28,8 @@ namespace Web_ban_xe_VinFast.Services.Implementations
         private async Task<List<TopCarDto>> GetTopSellingCars()
         {
             return await _context.OrderItems
+                .Include(oi => oi.Xe)                    // ← Thêm Include để tránh null
+                .Where(oi => oi.Xe != null)
                 .GroupBy(oi => oi.Xe.MauXe)
                 .Select(g => new TopCarDto
                 {

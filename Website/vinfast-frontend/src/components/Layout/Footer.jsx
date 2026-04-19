@@ -4,13 +4,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t mt-auto">
+    <footer className="bg-orange-100 border-t mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Cột 1: Thông tin thương hiệu */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-bold text-blue-600 mb-4">Ô tô điện VinFast</h3>
+            <h3 className="text-xl font-bold text-orange-500 mb-4">Ô tô điện VinFast</h3>
             <p className="text-gray-500 text-sm">
               Hệ thống quản lý mua bán xe hàng đầu, kết nối đại lý và khách hàng một cách nhanh chóng.
             </p>
@@ -40,9 +40,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-gray-900">Liên hệ</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>📍 123 Đường ABC, Hà Nội</li>
-              <li>📞 Hotline: 1900 1234</li>
-              <li>✉️ Email: support@cardealer.com</li>
+              <li>Yên Phong, Bắc Ninh</li>
+              <li>Hotline: 0123456789</li>
+              <li>Email: kietsupport@gmail.com</li>
             </ul>
           </div>
 

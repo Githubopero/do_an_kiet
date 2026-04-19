@@ -28,6 +28,16 @@ namespace Web_ban_xe_VinFast.Controllers
 
         [HttpPost("config/calculate")]
         public async Task<IActionResult> CalculatePrice([FromBody] ConfigPriceRequest req)
-            => Ok(await _carService.CalculatePriceAsync(req));
+        {
+            try
+            {
+                var result = await _carService.CalculatePriceAsync(req);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });   // Trả về 400 thay vì 500
+            }
+        }
     }
 }

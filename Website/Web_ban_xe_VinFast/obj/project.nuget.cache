@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cRY4c9pBorA=",
+  "dgSpecHash": "dHPll0SqYeQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\my pc\\Documents\\GitHub\\do_an_kiet\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
+  "projectFilePath": "C:\\Users\\my pc\\Desktop\\Đồ án\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\my pc\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\my pc\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -8,9 +8,11 @@ export default function AdminLayout() {
       <div className="flex w-full">
         <aside className="w-64 bg-white border-r h-screen p-6">
           <nav className="space-y-2">
-            <a href="/admin/dashboard" className="block px-4 py-3 rounded-lg hover:bg-gray-100">📊 Dashboard</a>
-            <a href="/admin/cars" className="block px-4 py-3 rounded-lg hover:bg-gray-100">🚗 Quản lý xe</a>
-            <a href="/admin/users" className="block px-4 py-3 rounded-lg hover:bg-gray-100">👤 Quản lý người dùng</a>
+            <a href="/admin/dashboard" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Dashboard</a>
+            <a href="/admin/users" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý người dùng</a>
+            <a href="/admin/cars" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý xe</a>
+            <a href="/admin/versions" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý phiên bản xe</a>
+            <a href="/admin/car-configs" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý cấu hình xe</a>
           </nav>
         </aside>
         <main className="flex-1 p-8">

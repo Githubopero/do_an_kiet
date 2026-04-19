@@ -18,7 +18,7 @@ export default function CarsManagement() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-8">Quản lý Xe</h1>
+      <h1 className="text-3xl font-bold mb-8">Quản lý xe</h1>
 
       {/* Form thêm xe mới */}
       <div className="bg-white p-6 rounded-2xl shadow mb-10">
@@ -39,7 +39,7 @@ export default function CarsManagement() {
           />
           <button
             type="submit"
-            className="bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700"
+            className="bg-orange-300 text-black py-3 rounded-lg font-medium hover:bg-orange-400"
           >
             Thêm xe
           </button>
@@ -49,7 +49,7 @@ export default function CarsManagement() {
       {/* Danh sách xe */}
       <div className="bg-white rounded-2xl shadow overflow-hidden">
         <table className="w-full">
-          <thead className="bg-gray-100">
+          <thead className="bg-orange-300">
             <tr>
               <th className="p-4 text-left">Mẫu xe</th>
               <th className="p-4 text-left">Trạng thái</th>

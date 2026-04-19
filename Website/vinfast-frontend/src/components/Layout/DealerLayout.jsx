@@ -8,9 +8,9 @@ export default function DealerLayout() {
       <div className="flex w-full">
         <aside className="w-64 bg-white border-r h-screen p-6">
           <nav className="space-y-2">
-            <a href="/dealer/orders" className="block px-4 py-3 rounded-lg hover:bg-gray-100">📋 Đơn hàng</a>
-            <a href="/dealer/inventory" className="block px-4 py-3 rounded-lg hover:bg-gray-100">📦 Kho hàng</a>
-            <a href="/dealer/customers" className="block px-4 py-3 rounded-lg hover:bg-gray-100">👥 Khách hàng</a>
+            <a href="/dealer/orders" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Đơn hàng</a>
+            <a href="/dealer/inventory" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Kho hàng</a>
+            <a href="/dealer/customers" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Khách hàng</a>
           </nav>
         </aside>
         <main className="flex-1 p-8">

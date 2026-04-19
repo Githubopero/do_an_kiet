@@ -19,12 +19,12 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 .ToListAsync();
 
             if (!cartItems.Any()) throw new Exception("Giỏ hàng trống");
-            if (!req.DaiLyId.HasValue) throw new Exception("Chưa chọn đại lý");
-
+            // Tự động gán DaiLyId = 1 nếu không có
+            long daiLyId = req.DaiLyId ?? 1;
             var order = new Order
             {
                 NguoiDungId = userId,
-                DaiLyId = req.DaiLyId,
+                DaiLyId = daiLyId,                    // ← Sử dụng giá trị mặc định
                 TrangThaiDonHang = "Pending",
                 SoTienDatCoc = cartItems.Sum(i => i.Gia) * 0.2m,
                 TongTien = cartItems.Sum(i => i.Gia),

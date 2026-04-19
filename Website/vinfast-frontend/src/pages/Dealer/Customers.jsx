@@ -14,11 +14,12 @@ export default function Customers() {
       
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <table className="w-full">
-          <thead className="bg-gray-100">
+          <thead className="bg-orange-300">
             <tr>
               <th className="p-4 text-left">Họ tên</th>
               <th className="p-4 text-left">Số điện thoại</th>
               <th className="p-4 text-left">Email</th>
+              {/* <th className="p-4 text-left">Số đơn hàng</th> */}
             </tr>
           </thead>
           <tbody>
@@ -27,6 +28,7 @@ export default function Customers() {
                 <td className="p-4 font-medium">{customer.hoTen}</td>
                 <td className="p-4">{customer.soDienThoai}</td>
                 <td className="p-4">{customer.email}</td>
+                {/* <td className="p-4">{customer.soDonHang}</td> */}
               </tr>
             ))}
           </tbody>

@@ -18,6 +18,7 @@ import Cars from './pages/Customer/Cars';
 import Cart from './pages/Customer/Cart';
 import Checkout from './pages/Customer/Checkout';
 import MyOrders from './pages/Customer/MyOrders';
+import Consultation from './pages/customer/Consultation'; // Điều chỉnh đường dẫn cho đúng với thư mục của bạn
 
 // Dealer Pages
 import DealerOrders from './pages/Dealer/Orders';
@@ -28,6 +29,8 @@ import Customers from './pages/Dealer/Customers';
 import Dashboard from './pages/Admin/Dashboard';
 import CarsManagement from './pages/Admin/CarsManagement';
 import UsersManagement from './pages/Admin/UsersManagement';
+import CarConfigManagement from './pages/Admin/CarConfigManagement';
+import CarVersionsManagement from './pages/Admin/CarVersionsManagement';
 
 function App() {
   return (
@@ -50,6 +53,7 @@ function App() {
             <Route path="cart" element={<Cart />} />
             <Route path="checkout" element={<Checkout />} />
             <Route path="orders" element={<MyOrders />} />
+            <Route path="consultation" element={<Consultation />} />
           </Route>
 
           {/* ==================== DEALER ROUTES ==================== */}
@@ -72,6 +76,9 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="cars" element={<CarsManagement />} />
             <Route path="users" element={<UsersManagement />} />
+            <Route path="car-configs" element={<CarConfigManagement />} />
+            {/* THÊM DÒNG NÀY ĐỂ HIỂN THỊ TRANG QUẢN LÝ PHIÊN BẢN */}
+            <Route path="versions" element={<CarVersionsManagement />} />
           </Route>
         </Routes>
       </Router>

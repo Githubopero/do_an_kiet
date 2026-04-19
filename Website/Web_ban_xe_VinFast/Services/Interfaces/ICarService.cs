@@ -12,5 +12,10 @@ namespace Web_ban_xe_VinFast.Services.Interfaces
 
         Task<List<CarListDto>> GetAllCarsAdminAsync();
         Task CreateCarAsync(CreateCarRequest req);
+
+
+
+        Task<IEnumerable<CarVersionDto>> GetVersionsByCarIdAsync(long carId);
+        Task CreateVersionAsync(long carId, CarVersionDto versionDto);
     }
 }

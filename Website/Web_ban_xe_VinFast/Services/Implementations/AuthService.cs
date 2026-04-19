@@ -79,6 +79,11 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 Success = true,
                 UserId = user.Id,
                 HoTen = user.HoTen,
+
+                // THÊM 2 DÒNG NÀY:
+                Email = user.Email,
+                SoDienThoai = user.SoDienThoai,
+
                 VaiTro = user.VaiTro,
                 Token = token,
                 ExpiresAt = DateTime.UtcNow.AddHours(24)
