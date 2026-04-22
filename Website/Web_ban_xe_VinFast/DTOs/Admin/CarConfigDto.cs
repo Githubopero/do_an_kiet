@@ -3,6 +3,8 @@
     public class CarConfigDto
     {
         public long Id { get; set; }
+        public long XeId { get; set; }
+        public long? PhienBanId { get; set; }
         public string MauXe { get; set; } = string.Empty;
         public string TenPhienBan { get; set; } = string.Empty;
         public string MauNgoaiThat { get; set; } = string.Empty;

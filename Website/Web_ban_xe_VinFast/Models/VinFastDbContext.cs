@@ -102,6 +102,13 @@ public partial class VinFastDbContext : DbContext
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 
             entity.ToTable("cars");
+            // Thêm cấu hình cho cột mới
+            entity.Property(e => e.IsDeleted)
+                  .HasDefaultValue(false)
+                  .HasColumnName("is_deleted");
+            // QUAN TRỌNG: Global Query Filter
+            // Mọi câu lệnh truy vấn tới Cars sẽ tự động thêm: WHERE is_deleted = 0
+            entity.HasQueryFilter(c => !c.IsDeleted);
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.MauXe)
@@ -198,6 +205,13 @@ public partial class VinFastDbContext : DbContext
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 
             entity.ToTable("car_versions");
+            // Thêm cấu hình cho cột mới
+            entity.Property(e => e.IsDeleted)
+                  .HasDefaultValue(false)
+                  .HasColumnName("is_deleted");
+            // QUAN TRỌNG: Global Query Filter
+            // Mọi câu lệnh truy vấn tới Cars sẽ tự động thêm: WHERE is_deleted = 0
+            entity.HasQueryFilter(v => !v.IsDeleted);
 
             entity.HasIndex(e => e.XeId, "xe_id");
 
@@ -382,12 +396,12 @@ public partial class VinFastDbContext : DbContext
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.AnhHuongDenGia)
-                .HasPrecision(10, 2)
+                .HasPrecision(18, 2)
                 .HasDefaultValueSql("'0.00'")
                 .HasColumnName("anh_huong_den_gia");
-            entity.Property(e => e.GiaOption)
+            entity.Property(e => e.TenTuyChon)
                 .HasMaxLength(100)
-                .HasColumnName("gia_option");
+                .HasColumnName("ten_tuy_chon");
             entity.Property(e => e.ThoiGianTao)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp")
@@ -395,9 +409,9 @@ public partial class VinFastDbContext : DbContext
             entity.Property(e => e.TrangThaiKhaDung)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("trang_thai_kha_dung");
-            entity.Property(e => e.TuyChonXe)
+            entity.Property(e => e.LoaiTuyChon)
                 .HasColumnType("enum('exterior_color','interior_color','battery_type','interior_type')")
-                .HasColumnName("tuy_chon_xe");
+                .HasColumnName("loai_tuy_chon");
             entity.Property(e => e.XeId).HasColumnName("xe_id");
 
             entity.HasOne(d => d.Xe).WithMany(p => p.Options)
@@ -586,6 +600,14 @@ public partial class VinFastDbContext : DbContext
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 
             entity.ToTable("users");
+
+            // Thêm cấu hình cho cột mới
+            entity.Property(e => e.IsDeleted)
+                  .HasDefaultValue(false)
+                  .HasColumnName("is_deleted");
+            // QUAN TRỌNG: Global Query Filter
+            // Mọi câu lệnh truy vấn tới Cars sẽ tự động thêm: WHERE is_deleted = 0
+            entity.HasQueryFilter(u => !u.IsDeleted);
 
             entity.HasIndex(e => e.Email, "email").IsUnique();
 

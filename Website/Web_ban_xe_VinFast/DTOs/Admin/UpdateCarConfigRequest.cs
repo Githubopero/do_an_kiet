@@ -2,6 +2,7 @@
 {
     public class UpdateCarConfigRequest
     {
+        public long PhienBanId { get; set; } // Thêm dòng này
         public string MauNgoaiThat { get; set; } = string.Empty;
         public string MauNoiThat { get; set; } = string.Empty;
         public string LoaiPin { get; set; } = string.Empty;

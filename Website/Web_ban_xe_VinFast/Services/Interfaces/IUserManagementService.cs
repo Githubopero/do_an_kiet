@@ -7,5 +7,7 @@ namespace Web_ban_xe_VinFast.Services.Interfaces
         Task CreateUserAsync(CreateUserRequest request);
         Task UpdateRoleAsync(long userId, string role);
         Task UpdateStatusAsync(long userId, string status);
+        Task UpdateUserAsync(long userId, UpdateUserRequest request); // Thêm dòng này
+        Task DeleteUserAsync(long userId);
     }
 }

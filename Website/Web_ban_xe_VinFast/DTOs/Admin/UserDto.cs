@@ -7,5 +7,6 @@
         public string Email { get; set; } = string.Empty;
         public string VaiTro { get; set; } = string.Empty;
         public string TrangThaiTaiKhoan { get; set; } = string.Empty;
+        public string SoDienThoai { get; set; }
     }
 }

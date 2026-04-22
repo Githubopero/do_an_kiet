@@ -21,6 +21,8 @@ public partial class CarVersion
 
     public DateTime? ThoiGianTao { get; set; }
 
+    public bool IsDeleted { get; set; } = false;
+
     public virtual ICollection<CarConfiguration> CarConfigurations { get; set; } = new List<CarConfiguration>();
 
     public virtual Car Xe { get; set; } = null!;

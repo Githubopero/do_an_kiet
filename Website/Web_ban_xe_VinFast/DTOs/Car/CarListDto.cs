@@ -10,5 +10,9 @@
 
         // THÊM DÒNG NÀY ĐỂ HẾT LỖI
         public string TrangThaiHoatDong { get; set; } = string.Empty;
+
+
+        // THÊM DÒNG NÀY
+        public string? MoTa { get; set; }
     }
 }

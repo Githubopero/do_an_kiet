@@ -9,9 +9,9 @@ public partial class Option
 
     public long XeId { get; set; }
 
-    public string TuyChonXe { get; set; } = null!;
+    public string LoaiTuyChon { get; set; } = null!;
 
-    public string GiaOption { get; set; } = null!;
+    public string TenTuyChon { get; set; } = null!;
 
     public decimal? AnhHuongDenGia { get; set; }
 

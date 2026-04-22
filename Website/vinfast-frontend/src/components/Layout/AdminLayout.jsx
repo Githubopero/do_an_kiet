@@ -10,9 +10,14 @@ export default function AdminLayout() {
           <nav className="space-y-2">
             <a href="/admin/dashboard" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Dashboard</a>
             <a href="/admin/users" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý người dùng</a>
-            <a href="/admin/cars" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý xe</a>
+            <a href="/admin/cars" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý mẫu xe</a>
             <a href="/admin/versions" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý phiên bản xe</a>
-            <a href="/admin/car-configs" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý cấu hình xe</a>
+            {/* THÊM DÒNG NÀY ĐỂ HIỂN THỊ MENU TÙY CHỌN */}
+            <a href="/admin/options" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">
+              Quản lý tùy chọn
+            </a>
+            <a href="/admin/car-configs" className="bg-orange-100 block px-4 py-3 rounded-lg hover:bg-orange-200">Quản lý cấu hình tiêu chuẩn</a>
+            
           </nav>
         </aside>
         <main className="flex-1 p-8">

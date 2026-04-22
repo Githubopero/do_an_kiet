@@ -15,6 +15,9 @@ public partial class Car
 
     public DateTime? ThoiGianTao { get; set; }
 
+    // Thêm dòng này
+    public bool IsDeleted { get; set; } = false;
+
     public virtual ICollection<CarConfiguration> CarConfigurations { get; set; } = new List<CarConfiguration>();
 
     public virtual ICollection<CarImage> CarImages { get; set; } = new List<CarImage>();

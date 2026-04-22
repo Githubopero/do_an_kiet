@@ -139,10 +139,12 @@ namespace Web_ban_xe_VinFast.Services.Implementations
         public async Task<List<CarListDto>> GetAllCarsAdminAsync()
         {
             return await _context.Cars
+                .Where(c => !c.IsDeleted) // Chỉ lấy những xe chưa bị xóa mềm
                 .Select(c => new CarListDto
                 {
                     Id = c.Id,
                     MauXe = c.MauXe,
+                    MoTa = c.MoTa, // THÊM DÒNG NÀY ĐỂ TRẢ VỀ MÔ TẢ
                     TrangThaiHoatDong = c.TrangThaiHoatDong, // THÊM DÒNG NÀY
                     GiaThapNhat = c.CarVersions.Any() ? c.CarVersions.Min(v => v.GiaCoBan) : 0,
                     // Admin có thể không cần hình ảnh ở bảng danh sách này để tải cho nhanh
@@ -164,7 +166,7 @@ namespace Web_ban_xe_VinFast.Services.Implementations
         }
 
 
-
+        //quản lý phiên bản xe admin
         public async Task<IEnumerable<CarVersionDto>> GetVersionsByCarIdAsync(long carId)
         {
             return await _context.CarVersions
@@ -180,6 +182,27 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 .ToListAsync();
         }
 
+        public async Task<List<CarVersionDto>> GetAllVersionsAdminAsync()
+        {
+            return await _context.CarVersions
+                .Include(v => v.Xe) // Join với bảng Cars để lấy tên mẫu xe
+                .Where(v => !v.IsDeleted) // Chỉ lấy bản ghi chưa xóa mềm
+                .OrderByDescending(v => v.Id) // Sắp xếp ID giảm dần (mới nhất lên đầu)
+                .Select(v => new CarVersionDto
+                {
+                    Id = v.Id,
+                    XeId = v.XeId,
+                    MauXe = v.Xe.MauXe, // Ánh xạ từ bảng Cars
+                    TenPhienBan = v.TenPhienBan,
+                    GiaCoBan = v.GiaCoBan,
+                    DungLuongPin = v.DungLuongPin,
+                    QuangDuongDiChuyen = v.QuangDuongDiChuyen,
+                    // Ép kiểu từ sbyte? sang int để khớp với DTO
+                    SoChoNgoi = v.SoChoNgoi.HasValue ? (int)v.SoChoNgoi.Value : 5
+                })
+                .ToListAsync();
+        }
+
         public async Task CreateVersionAsync(long carId, CarVersionDto dto)
         {
             var phienBan = new CarVersion
@@ -188,10 +211,89 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 TenPhienBan = dto.TenPhienBan,
                 GiaCoBan = dto.GiaCoBan,
                 DungLuongPin = dto.DungLuongPin,
-                QuangDuongDiChuyen = dto.QuangDuongDiChuyen
+                QuangDuongDiChuyen = dto.QuangDuongDiChuyen,
+                SoChoNgoi = (sbyte)dto.SoChoNgoi, // Ép kiểu về sbyte cho khớp model
+                IsDeleted = false,
+                ThoiGianTao = DateTime.Now // Tự động lưu thời gian tạo
             };
 
             _context.CarVersions.Add(phienBan);
+            await _context.SaveChangesAsync();
+        }
+        public async Task UpdateVersionAsync(long versionId, CarVersionDto dto)
+        {
+            var v = await _context.CarVersions.FindAsync(versionId);
+            if (v == null) throw new Exception("Không tìm thấy phiên bản");
+            v.TenPhienBan = dto.TenPhienBan;
+            v.SoChoNgoi = (sbyte)dto.SoChoNgoi; // Cập nhật số chỗ ngồi
+            v.DungLuongPin = dto.DungLuongPin;
+            v.QuangDuongDiChuyen = dto.QuangDuongDiChuyen;
+            v.GiaCoBan = dto.GiaCoBan;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteVersionAsync(long versionId)
+        {
+            var v = await _context.CarVersions.FindAsync(versionId);
+            if (v != null)
+            {
+                v.IsDeleted = true;
+                await _context.SaveChangesAsync();
+            }
+        }
+
+
+
+        //quản lý xe admin
+        // 1. Cập nhật thông tin cơ bản (Tên xe và Mô tả)
+        public async Task UpdateCarAsync(long id, UpdateCarRequest request)
+        {
+            var car = await _context.Cars.FindAsync(id);
+
+            if (car == null)
+            {
+                throw new Exception("Không tìm thấy mẫu xe này trong hệ thống.");
+            }
+            if (string.IsNullOrWhiteSpace(request.MauXe))
+                throw new Exception("Tên mẫu xe không được để trống.");
+
+            // Cập nhật các trường thông tin
+            car.MauXe = request.MauXe;
+            car.MoTa = request.MoTa;
+
+            _context.Cars.Update(car);
+            await _context.SaveChangesAsync();
+        }
+
+        // 2. Cập nhật trạng thái hoạt động (Active/Inactive)
+        public async Task UpdateCarStatusAsync(long id, string status)
+        {
+            var car = await _context.Cars.FindAsync(id);
+
+            if (car == null)
+            {
+                throw new Exception("Không tìm thấy xe để cập nhật trạng thái.");
+            }
+
+            // Chuyển status về lowercase để đồng bộ dữ liệu nếu cần
+            car.TrangThaiHoatDong = status.ToLower();
+
+            await _context.SaveChangesAsync();
+        }
+
+        // 3. Xóa xe
+        public async Task DeleteCarAsync(long id)
+        {
+            var car = await _context.Cars
+                .IgnoreQueryFilters() // Phải thêm cái này để tìm được cả xe đã xóa nếu cần
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (car == null) throw new Exception("Xe không tồn tại");
+
+            car.IsDeleted = true;
+            car.TrangThaiHoatDong = "inactive"; // Kết hợp đổi trạng thái để đồng bộ UI
+
+            _context.Cars.Update(car);
             await _context.SaveChangesAsync();
         }
     }

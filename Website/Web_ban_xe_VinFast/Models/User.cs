@@ -27,6 +27,8 @@ public partial class User
 
     public DateTime? ThoiGianCapNhat { get; set; }
 
+    public bool IsDeleted { get; set; } = false;
+
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();

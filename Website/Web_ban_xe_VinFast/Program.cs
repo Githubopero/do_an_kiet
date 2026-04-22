@@ -42,6 +42,7 @@ namespace Web_ban_xe_VinFast
             builder.Services.AddScoped<IAdminDashboardService, AdminDashboardService>();
             builder.Services.AddScoped<ICarConfigService, CarConfigService>();
             builder.Services.AddScoped<IConsultationService, ConsultationService>();
+            builder.Services.AddScoped<IOptionService, OptionService>();
 
 
             // Trong builder.Services

@@ -31,6 +31,7 @@ import CarsManagement from './pages/Admin/CarsManagement';
 import UsersManagement from './pages/Admin/UsersManagement';
 import CarConfigManagement from './pages/Admin/CarConfigManagement';
 import CarVersionsManagement from './pages/Admin/CarVersionsManagement';
+import CarOptionsManagement from './pages/Admin/CarOptionsManagement';
 
 function App() {
   return (
@@ -79,6 +80,8 @@ function App() {
             <Route path="car-configs" element={<CarConfigManagement />} />
             {/* THÊM DÒNG NÀY ĐỂ HIỂN THỊ TRANG QUẢN LÝ PHIÊN BẢN */}
             <Route path="versions" element={<CarVersionsManagement />} />
+            {/* 2. THÊM DÒNG NÀY: Route cho quản lý tùy chọn */}
+            <Route path="options" element={<CarOptionsManagement />} />
           </Route>
         </Routes>
       </Router>
