@@ -231,3 +231,4 @@ C:\Users\my pc\Documents\GitHub\do_an_kiet\Website\Web_ban_xe_VinFast\obj\Debug\
 C:\Users\my pc\Desktop\Đồ án\Website\Web_ban_xe_VinFast\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\my pc\Desktop\Đồ án\Website\Web_ban_xe_VinFast\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\my pc\Desktop\Đồ án\Website\Web_ban_xe_VinFast\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\my pc\Desktop\Đồ án\Website\Web_ban_xe_VinFast\bin\Debug\net8.0\Web_ban_xe_VinFast.staticwebassets.runtime.json

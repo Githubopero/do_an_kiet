@@ -9,29 +9,50 @@ namespace Web_ban_xe_VinFast.Services.Implementations
     public class CarService : ICarService
     {
         private readonly VinFastDbContext _context;
+        // Giả sử server của bạn chạy port 5000, hãy thay đổi cho đúng với thực tế
+        private readonly string _baseUploadUrl = "http://localhost:5130/uploads/";
 
         public CarService(VinFastDbContext context) => _context = context;
+        // Hàm phụ trợ để xử lý URL ảnh
+        private string GetFullImageUrl(string? path)
+        {
+            if (string.IsNullOrEmpty(path)) return "";
+            if (path.StartsWith("http")) return path;
 
+            // Bước 1: Lấy tên file gốc bằng cách loại bỏ các chữ "uploads/" hoặc "uploads\" nếu có
+            // Ví dụ: "uploads/xe.jpg" sẽ chỉ còn "xe.jpg"
+            string fileName = path.Replace("uploads/", "").Replace("uploads\\", "");
+
+            // Bước 2: Nối lại theo chuẩn duy nhất một lần
+            // Kết quả mong muốn: http://localhost:5130/uploads/xe.jpg
+            return $"http://localhost:5130/uploads/{fileName}";
+        }
         public async Task<List<CarListDto>> GetAllCarsAsync()
         {
-            return await _context.Cars
-                .Where(c => c.TrangThaiHoatDong == "active")
-                .Select(c => new CarListDto
-                {
-                    Id = c.Id,
-                    MauXe = c.MauXe,
-                    TrangThaiHoatDong = c.TrangThaiHoatDong, // THÊM DÒNG NÀY
-                    // Sửa ở đây: Tránh lỗi Min khi không có phiên bản
-                    GiaThapNhat = c.CarVersions.Any()
-                        ? c.CarVersions.Min(v => v.GiaCoBan)
-                        : 0,
+            var cars = await _context.Cars
+            .Where(c => c.TrangThaiHoatDong == "active" && !c.IsDeleted)
+            .Select(c => new
+            {
+                c.Id,
+                c.MauXe,
+                c.TrangThaiHoatDong,
+                c.MoTa,
+                GiaThapNhat = c.CarVersions.Any() ? c.CarVersions.Min(v => v.GiaCoBan) : 0,
+                AnhChinh = c.CarImages.OrderBy(i => i.ThuTuSapXep).Select(i => i.DuongDanHinhAnh).FirstOrDefault()
+            })
+            .ToListAsync();
 
-                    DuongDanHinhAnhChinh = c.CarImages
-                        .OrderBy(i => i.ThuTuSapXep)
-                        .Select(i => i.DuongDanHinhAnh)
-                        .FirstOrDefault() ?? ""
-                })
-                .ToListAsync();
+            // Map sang DTO và xử lý URL ảnh
+            return cars.Select(c => new CarListDto
+            {
+                Id = c.Id,
+                MauXe = c.MauXe,
+                TrangThaiHoatDong = c.TrangThaiHoatDong,
+                MoTa = c.MoTa,
+                GiaThapNhat = c.GiaThapNhat,
+                DuongDanHinhAnhChinh = GetFullImageUrl(c.AnhChinh)
+            }).ToList();
+        
         }
 
         public async Task<List<CarListDto>> FilterCarsAsync(CarFilterParams param)
@@ -55,10 +76,9 @@ namespace Web_ban_xe_VinFast.Services.Implementations
             {
                 Id = c.Id,
                 MauXe = c.MauXe,
-                GiaThapNhat = c.CarVersions.Any()
-                    ? c.CarVersions.Min(v => v.GiaCoBan)
-                    : 0,
-                DuongDanHinhAnhChinh = c.CarImages.OrderBy(i => i.ThuTuSapXep).Select(i => i.DuongDanHinhAnh).FirstOrDefault() ?? ""
+                GiaThapNhat = c.CarVersions.Any() ? c.CarVersions.Min(v => v.GiaCoBan) : 0,
+                // Phải đi qua hàm xử lý URL giống như GetAllCarsAsync
+                DuongDanHinhAnhChinh = GetFullImageUrl(c.CarImages.OrderBy(i => i.ThuTuSapXep).Select(i => i.DuongDanHinhAnh).FirstOrDefault())
             }).ToListAsync();
         }
 
@@ -88,7 +108,7 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 }).ToList(),
                 HinhAnh = car.CarImages.Select(i => new CarImageDto
                 {
-                    DuongDanHinhAnh = i.DuongDanHinhAnh,
+                    DuongDanHinhAnh = GetFullImageUrl(i.DuongDanHinhAnh),
                     LoaiAnh = i.LoaiAnh
                 }).ToList(),
                 CauHinhCoSan = car.CarConfigurations.Select(cfg => new CarConfigurationDto

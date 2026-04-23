@@ -2,10 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Web_ban_xe_VinFast.DTOs.Admin;
+using Web_ban_xe_VinFast.DTOs.Car;
+using Web_ban_xe_VinFast.DTOs.CarImage;
 using Web_ban_xe_VinFast.Models;
 using Web_ban_xe_VinFast.Services.Implementations;
 using Web_ban_xe_VinFast.Services.Interfaces;
-using Web_ban_xe_VinFast.DTOs.Car;
 
 namespace Web_ban_xe_VinFast.Controllers
 {
@@ -21,19 +22,22 @@ namespace Web_ban_xe_VinFast.Controllers
         private readonly IAdminDashboardService _dashboardService;
         private readonly ICarConfigService _carConfigService;
         private readonly IOptionService _optionService;
+        private readonly ICarImageService _imageService;
 
         public AdminController(
             ICarService carService,
             IUserManagementService userService,
             IAdminDashboardService dashboardService,
             ICarConfigService carConfigService,// ← Thêm vào constructor
-            IOptionService optionService) // Thêm vào đây
+            IOptionService optionService,
+            ICarImageService imageService) // Thêm vào đây
         {
             _carService = carService;
             _userService = userService;
             _dashboardService = dashboardService;
             _carConfigService = carConfigService;   // ← Gán giá trị
             _optionService = optionService; // Gán giá trị
+            _imageService = imageService;
         }
         //quản lý xe admin
         [HttpGet("cars")]
@@ -241,6 +245,40 @@ namespace Web_ban_xe_VinFast.Controllers
             {
                 return BadRequest(new { success = false, message = ex.Message });
             }
+        }
+
+
+
+
+        // --- QUẢN LÝ HÌNH ẢNH XE ---
+
+        [HttpGet("car-images")]
+        public async Task<IActionResult> GetAllImages()
+            => Ok(await _imageService.GetAllImagesAsync());
+
+        [HttpGet("cars/{carId}/images")]
+        public async Task<IActionResult> GetImagesByCar(long carId)
+            => Ok(await _imageService.GetImagesByCarIdAsync(carId));
+
+        [HttpPost("car-images")]
+        public async Task<IActionResult> UploadImage([FromForm] UploadCarImageRequest req)
+        {
+            var result = await _imageService.AddImageAsync(req);
+            return Ok(new { success = true, data = result, message = "Tải ảnh lên thành công" });
+        }
+
+        [HttpPut("car-images/{id}")]
+        public async Task<IActionResult> UpdateImage(long id, [FromForm] UploadCarImageRequest req)
+        {
+            await _imageService.UpdateImageAsync(id, req);
+            return Ok(new { success = true, message = "Cập nhật ảnh thành công" });
+        }
+
+        [HttpDelete("car-images/{id}")]
+        public async Task<IActionResult> DeleteImage(long id)
+        {
+            await _imageService.DeleteImageAsync(id);
+            return Ok(new { success = true, message = "Xóa ảnh thành công" });
         }
 
     }

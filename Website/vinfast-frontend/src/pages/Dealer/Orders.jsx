@@ -33,10 +33,10 @@ export default function DealerOrders() {
           className="border px-4 py-2 rounded-lg"
         >
           <option value="">Tất cả</option>
-          <option value="Pending">Pending</option>
-          <option value="Confirmed">Confirmed</option>
-          <option value="InProduction">InProduction</option>
-          <option value="Delivered">Delivered</option>
+          <option value="Pending">Đang xử lý</option>
+          <option value="Confirmed">Đã xác nhận</option>
+          <option value="InProduction">Đang chuẩn bị</option>
+          <option value="Delivered">Đã giao hàng</option>
         </select>
       </div>
 
@@ -76,10 +76,10 @@ export default function DealerOrders() {
                     className="border rounded px-3 py-1.5 text-sm"
                   >
                     <option value="">Cập nhật trạng thái</option>
-                    <option value="Confirmed">Confirmed</option>
-                    <option value="InProduction">InProduction</option>
-                    <option value="Delivered">Delivered</option>
-                    <option value="Cancelled">Cancelled</option>
+                    <option value="Confirmed">Đã được xác nhận</option>
+                    <option value="InProduction">Đang chuẩn bị</option>
+                    <option value="Delivered">Đã giao hàng</option>
+                    <option value="Cancelled">Đã hủy</option>
                   </select>
                 </td>
               </tr>

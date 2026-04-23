@@ -24,6 +24,10 @@ import Consultation from './pages/customer/Consultation'; // Điều chỉnh đ�
 import DealerOrders from './pages/Dealer/Orders';
 import Inventory from './pages/Dealer/Inventory';
 import Customers from './pages/Dealer/Customers';
+// THÊM DÒNG NÀY (Đảm bảo đúng đường dẫn file bạn đã tạo)
+import ConsultationManagement from './pages/Dealer/ConsultationManagement';
+// THÊM DÒNG NÀY:
+import AppointmentManagement from './pages/Dealer/AppointmentManagement';
 
 // Admin Pages
 import Dashboard from './pages/Admin/Dashboard';
@@ -32,6 +36,8 @@ import UsersManagement from './pages/Admin/UsersManagement';
 import CarConfigManagement from './pages/Admin/CarConfigManagement';
 import CarVersionsManagement from './pages/Admin/CarVersionsManagement';
 import CarOptionsManagement from './pages/Admin/CarOptionsManagement';
+// 1. Import component quản lý hình ảnh (đảm bảo đường dẫn file chính xác)
+import CarImageManagement from './pages/Admin/CarImageManagement';
 
 function App() {
   return (
@@ -66,6 +72,11 @@ function App() {
             <Route path="orders" element={<DealerOrders />} />
             <Route path="inventory" element={<Inventory />} />
             <Route path="customers" element={<Customers />} />
+            {/* THÊM DÒNG NÀY: Route cho Quản lý tư vấn */}
+            <Route path="consultations" element={<ConsultationManagement />} />
+            {/* THÊM DÒNG NÀY: */}
+            <Route path="appointments" element={<AppointmentManagement />} />
+            
           </Route>
 
           {/* ==================== ADMIN ROUTES ==================== */}
@@ -82,6 +93,8 @@ function App() {
             <Route path="versions" element={<CarVersionsManagement />} />
             {/* 2. THÊM DÒNG NÀY: Route cho quản lý tùy chọn */}
             <Route path="options" element={<CarOptionsManagement />} />
+            {/* 2. THÊM DÒNG NÀY: Route cho quản lý hình ảnh */}
+            <Route path="images" element={<CarImageManagement />} />
           </Route>
         </Routes>
       </Router>

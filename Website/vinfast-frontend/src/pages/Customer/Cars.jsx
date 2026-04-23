@@ -59,7 +59,7 @@ export default function Cars() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filteredCars.map(car => (
           <div key={car.id} className="bg-white rounded-2xl shadow hover:shadow-xl overflow-hidden">
             <img 
@@ -70,13 +70,13 @@ export default function Cars() {
             <div className="p-5">
               <h3 className="font-bold text-2xl">{car.mauXe}</h3>
               <p className="text-3xl font-semibold text-orange-400 mt-2">
-                {car.giaThapNhat.toLocaleString()} đ
+                Chỉ từ: {car.giaThapNhat.toLocaleString()} đ
               </p>
               <Link 
                 to={`/car/${car.id}`}
                 className="mt-6 block text-center bg-orange-300 hover:bg-orange-500 text-black py-3 rounded-xl font-medium"
               >
-                Xem chi tiết và cấu hình
+                Xem chi tiết
               </Link>
             </div>
           </div>

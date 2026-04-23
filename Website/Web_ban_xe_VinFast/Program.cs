@@ -43,6 +43,8 @@ namespace Web_ban_xe_VinFast
             builder.Services.AddScoped<ICarConfigService, CarConfigService>();
             builder.Services.AddScoped<IConsultationService, ConsultationService>();
             builder.Services.AddScoped<IOptionService, OptionService>();
+            builder.Services.AddScoped<ICarImageService, CarImageService>();
+            builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 
 
             // Trong builder.Services
@@ -107,6 +109,9 @@ namespace Web_ban_xe_VinFast
             app.UseRouting();
             app.UseCors("AllowFrontend");
 
+            // THÊM DÒNG NÀY Ở ĐÂY:
+            app.UseStaticFiles();
+            
 
             app.UseAuthentication();
             app.UseAuthorization();

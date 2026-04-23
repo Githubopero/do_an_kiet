@@ -750,6 +750,175 @@
         }
       }
     },
+    "/api/admin/car-images": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "XeId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "LoaiAnh": {
+                    "type": "string"
+                  },
+                  "ThuTuSapXep": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "XeId": {
+                  "style": "form"
+                },
+                "File": {
+                  "style": "form"
+                },
+                "LoaiAnh": {
+                  "style": "form"
+                },
+                "ThuTuSapXep": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/cars/{carId}/images": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "carId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/car-images/{id}": {
+      "put": {
+        "tags": [
+          "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "XeId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "LoaiAnh": {
+                    "type": "string"
+                  },
+                  "ThuTuSapXep": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "XeId": {
+                  "style": "form"
+                },
+                "File": {
+                  "style": "form"
+                },
+                "LoaiAnh": {
+                  "style": "form"
+                },
+                "ThuTuSapXep": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/auth/register": {
       "post": {
         "tags": [
@@ -992,7 +1161,7 @@
     "/api/consultations": {
       "post": {
         "tags": [
-          "Consultation"
+          "CustomerConsultation"
         ],
         "requestBody": {
           "content": {
@@ -1023,7 +1192,7 @@
     "/api/consultations/my-requests": {
       "get": {
         "tags": [
-          "Consultation"
+          "CustomerConsultation"
         ],
         "responses": {
           "200": {
@@ -1135,6 +1304,135 @@
         "tags": [
           "Dealer"
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/dealer/consultations": {
+      "get": {
+        "tags": [
+          "Dealer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/dealer/consultations/{id}": {
+      "put": {
+        "tags": [
+          "Dealer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateConsultationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateConsultationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateConsultationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Dealer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/dealer/appointments": {
+      "get": {
+        "tags": [
+          "Dealer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/dealer/appointments/{id}": {
+      "put": {
+        "tags": [
+          "Dealer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAppointmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAppointmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAppointmentRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -1557,6 +1855,24 @@
         },
         "additionalProperties": false
       },
+      "UpdateAppointmentRequest": {
+        "type": "object",
+        "properties": {
+          "ngayGioHen": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ghiChu": {
+            "type": "string",
+            "nullable": true
+          },
+          "trangThai": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateCarConfigRequest": {
         "type": "object",
         "properties": {
@@ -1595,6 +1911,20 @@
             "nullable": true
           },
           "moTa": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateConsultationRequest": {
+        "type": "object",
+        "properties": {
+          "mucDoUuTien": {
+            "type": "string",
+            "nullable": true
+          },
+          "trangThaiXyLy": {
             "type": "string",
             "nullable": true
           }
