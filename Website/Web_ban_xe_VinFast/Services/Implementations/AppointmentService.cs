@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Web_ban_xe_VinFast.DTOs.Customer;
 using Web_ban_xe_VinFast.DTOs.Dealer;
 using Web_ban_xe_VinFast.Models;
 using Web_ban_xe_VinFast.Services.Interfaces;
@@ -56,6 +57,36 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 _context.Appointments.Remove(appointment);
                 await _context.SaveChangesAsync();
             }
+        }
+
+
+
+        //lịch hẹn customer
+        public async Task CreateAppointmentAsync(long userId, AppointmentCreateDto dto)
+        {
+            // Kiểm tra xem thời gian hẹn có trong tương lai không
+            if (dto.NgayGioHen <= DateTime.Now)
+                throw new Exception("Ngày hẹn phải lớn hơn thời gian hiện tại.");
+
+            var appointment = new Appointment
+            {
+                NguoiDungId = userId,
+                DaiLyId = dto.DaiLyId,
+                NgayGioHen = dto.NgayGioHen,
+                GhiChu = dto.GhiChu,
+                TrangThai = "Scheduled", // Mặc định khi tạo mới
+                ThoiGianTao = DateTime.Now
+            };
+
+            _context.Appointments.Add(appointment);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<List<Appointment>> GetUserAppointmentsAsync(long userId)
+        {
+            return await _context.Appointments
+                .Where(a => a.NguoiDungId == userId)
+                .OrderByDescending(a => a.NgayGioHen) // Lịch gần nhất lên đầu
+                .ToListAsync();
         }
     }
 }

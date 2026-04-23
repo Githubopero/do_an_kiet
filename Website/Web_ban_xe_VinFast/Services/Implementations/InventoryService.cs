@@ -20,7 +20,7 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 {
                     Id = di.Id,
                     MauXe = di.Xe.MauXe,
-                    CauHinhXe = di.CauHinhXe,
+                    //CauHinhXe = di.CauHinhXe,
                     SoLuongTonKho = di.SoLuongTonKho,
                     CanhBaoTonThap = di.SoLuongTonKho <= (di.NguongCanhBaoTonThap ?? 5)
                 })

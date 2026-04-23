@@ -164,9 +164,9 @@ export default function AppointmentManagement() {
                   value={editingItem.trangThai}
                   onChange={e => setEditingItem({...editingItem, trangThai: e.target.value})}
                 >
-                  <option value="Scheduled">Scheduled</option>
-                  <option value="Completed">Completed</option>
-                  <option value="Cancelled">Cancelled</option>
+                  <option value="Scheduled">Đã lên lịch</option>
+                  <option value="Completed">Đã hoàn thành</option>
+                  <option value="Cancelled">Đã hủy</option>
                 </select>
               </div>
               <div>

@@ -30,6 +30,12 @@ export default function Navbar() {
             <Link to="/customer/consultation" className="hover:underline">
               Yêu cầu tư vấn
             </Link>
+
+            {/* THÊM DÒNG NÀY: Link đặt lịch lái thử */}
+            <Link to="/customer/book-appointment" className="hover:underline">
+              Đặt lịch lái thử
+            </Link>
+            <Link to="/customer/compare" className="hover:underline">So sánh xe</Link>
           </div>
         )}
 

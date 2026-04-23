@@ -31,14 +31,6 @@ export default function Inventory() {
     }
   };
 
-  // Hàm hỗ trợ đọc dữ liệu JSON an toàn
-  const parseConfig = (configRaw) => {
-    try {
-      return typeof configRaw === 'string' ? JSON.parse(configRaw) : configRaw;
-    } catch (e) {
-      return {};
-    }
-  };
 
   if (loading) return <div className="p-8 text-center">Đang tải dữ liệu kho...</div>;
 
@@ -51,26 +43,16 @@ export default function Inventory() {
           <thead className="bg-orange-300">
             <tr>
               <th className="p-4 text-left">Mẫu xe</th>
-              <th className="p-4 text-left">Phiên bản</th>
-              <th className="p-4 text-left">Màu ngoại thất</th>
-              <th className="p-4 text-left">Màu nội thất</th>
               <th className="p-4 text-center">Tồn kho</th>
               <th className="p-4 text-center">Hành động</th>
             </tr>
           </thead>
           <tbody>
             {inventory.map(item => {
-              const config = parseConfig(item.cauHinhXe);
               return (
                 <tr key={item.id} className="border-t hover:bg-blue-50 transition-colors">
                   <td className="p-4 font-bold text-blue-900">{item.mauXe}</td>
-                  <td className="p-4">
-                    <span className="px-2 py-1 bg-gray-100 rounded text-sm font-semibold">
-                      {config.phien_ban || 'N/A'}
-                    </span>
-                  </td>
-                  <td className="p-4 text-gray-700">{config.mau_ngoai || 'N/A'}</td>
-                  <td className="p-4 text-gray-700">{config.mau_noi || 'N/A'}</td>
+                
                   <td className="p-4 text-center">
                     <span className={`inline-block w-12 py-1 rounded-full font-bold ${item.soLuongTonKho < 5 ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'}`}>
                       {item.soLuongTonKho}

@@ -11,7 +11,7 @@ public partial class DealerInventory
 
     public long XeId { get; set; }
 
-    public string CauHinhXe { get; set; } = null!;
+    //public string CauHinhXe { get; set; } = null!;
 
     public int SoLuongTonKho { get; set; }
 

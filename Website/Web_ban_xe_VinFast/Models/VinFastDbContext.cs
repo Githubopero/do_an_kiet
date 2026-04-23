@@ -362,9 +362,9 @@ public partial class VinFastDbContext : DbContext
             entity.HasIndex(e => e.XeId, "xe_id");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.CauHinhXe)
-                .HasColumnType("json")
-                .HasColumnName("cau_hinh_xe");
+            //entity.Property(e => e.CauHinhXe)
+            //    .HasColumnType("json")
+            //    .HasColumnName("cau_hinh_xe");
             entity.Property(e => e.DaiLyId).HasColumnName("dai_ly_id");
             entity.Property(e => e.NguongCanhBaoTonThap)
                 .HasDefaultValueSql("'5'")

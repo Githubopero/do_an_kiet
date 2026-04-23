@@ -723,6 +723,68 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web_ban_xe_VinFast.Controllers.CustomerController",
+    "Method": "CreateAppointment",
+    "RelativePath": "api/customer/appointments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Web_ban_xe_VinFast.DTOs.Customer.AppointmentCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_ban_xe_VinFast.Controllers.CustomerController",
+    "Method": "GetCompareDetails",
+    "RelativePath": "api/customer/compare-details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_ban_xe_VinFast.Controllers.CustomerController",
+    "Method": "GetVersionsForSelection",
+    "RelativePath": "api/customer/compare-versions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_ban_xe_VinFast.Controllers.CustomerController",
+    "Method": "GetMyAppointments",
+    "RelativePath": "api/customer/my-appointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_ban_xe_VinFast.Controllers.CustomerController",
+    "Method": "GetProfile",
+    "RelativePath": "api/customer/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_ban_xe_VinFast.Controllers.DealerController",
     "Method": "GetAppointments",
     "RelativePath": "api/dealer/appointments",

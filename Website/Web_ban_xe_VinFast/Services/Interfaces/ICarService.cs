@@ -1,5 +1,6 @@
-﻿using Web_ban_xe_VinFast.DTOs.Car;
-using Web_ban_xe_VinFast.DTOs.Admin;
+﻿using Web_ban_xe_VinFast.DTOs.Admin;
+using Web_ban_xe_VinFast.DTOs.Car;
+using Web_ban_xe_VinFast.DTOs.Customer;
 
 namespace Web_ban_xe_VinFast.Services.Interfaces
 {
@@ -37,5 +38,13 @@ namespace Web_ban_xe_VinFast.Services.Interfaces
         Task UpdateCarAsync(long id, UpdateCarRequest request);
         Task UpdateCarStatusAsync(long id, string status);
         Task DeleteCarAsync(long id);
+
+
+        //so sánh xe (customer)
+        // Lấy danh sách gọn nhẹ để người dùng chọn trong dropdown so sánh
+        Task<List<CarCompareDto>> GetAllVersionsForComparisonAsync();
+
+        // Lấy chi tiết các phiên bản dựa trên danh sách ID (vídụ: ?ids=1,5,8)
+        Task<List<CarCompareDto>> GetVersionsToCompareAsync(List<long> ids);
     }
 }

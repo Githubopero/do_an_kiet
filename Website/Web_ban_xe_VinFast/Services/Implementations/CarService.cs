@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Web_ban_xe_VinFast.DTOs.Admin;
 using Web_ban_xe_VinFast.DTOs.Car;
+using Web_ban_xe_VinFast.DTOs.Customer;
 using Web_ban_xe_VinFast.Models;
 using Web_ban_xe_VinFast.Services.Interfaces;
 
@@ -315,6 +316,75 @@ namespace Web_ban_xe_VinFast.Services.Implementations
 
             _context.Cars.Update(car);
             await _context.SaveChangesAsync();
+        }
+
+
+        //so sánh xe(customer)
+        public async Task<List<CarCompareDto>> GetAllVersionsForComparisonAsync()
+        {
+            var versions = await _context.CarVersions
+        .Include(v => v.Xe)
+        .ThenInclude(x => x.CarImages)
+        .Select(v => new
+        {
+            Id = v.Id, // Đổi thành Id = v.Id
+            TenMauXe = v.Xe.MauXe,
+            TenPhienBan = v.TenPhienBan, // Bỏ v. ở bên trái
+            GiaCoBan = v.GiaCoBan, // Bỏ v. ở bên trái
+            DungLuongPin = v.DungLuongPin,
+            QuangDuongDiChuyen = v.QuangDuongDiChuyen,
+            SoChoNgoi = v.SoChoNgoi,
+            AnhRaw = v.Xe.CarImages
+                        .Where(img => img.LoaiAnh == "main")
+                        .Select(img => img.DuongDanHinhAnh)
+                        .FirstOrDefault()
+        }).ToListAsync();
+
+            return versions.Select(v => new CarCompareDto
+            {
+                Id = v.Id,
+                TenMauXe = v.TenMauXe,
+                TenPhienBan = v.TenPhienBan,
+                GiaCoBan = v.GiaCoBan,
+                DungLuongPin = v.DungLuongPin,
+                QuangDuongDiChuyen = v.QuangDuongDiChuyen,
+                SoChoNgoi = (int?)v.SoChoNgoi,
+                HinhAnh = GetFullImageUrl(v.AnhRaw)
+            }).ToList();
+        }
+
+        public async Task<List<CarCompareDto>> GetVersionsToCompareAsync(List<long> ids)
+        {
+            var versions = await _context.CarVersions
+        .Where(v => ids.Contains(v.Id))
+        .Include(v => v.Xe)
+        .ThenInclude(x => x.CarImages)
+        .Select(v => new
+        {
+            Id = v.Id, // Đổi ở đây
+            TenMauXe = v.Xe.MauXe,
+            TenPhienBan = v.TenPhienBan, // Bỏ v. ở bên trái
+            GiaCoBan = v.GiaCoBan,
+            DungLuongPin = v.DungLuongPin,
+            QuangDuongDiChuyen = v.QuangDuongDiChuyen,
+            SoChoNgoi = v.SoChoNgoi,
+            AnhRaw = v.Xe.CarImages
+                        .Where(img => img.LoaiAnh == "main")
+                        .Select(img => img.DuongDanHinhAnh)
+                        .FirstOrDefault()
+        }).ToListAsync();
+
+            return versions.Select(v => new CarCompareDto
+            {
+                Id = v.Id,
+                TenMauXe = v.TenMauXe,
+                TenPhienBan = v.TenPhienBan,
+                GiaCoBan = v.GiaCoBan,
+                DungLuongPin = v.DungLuongPin,
+                QuangDuongDiChuyen = v.QuangDuongDiChuyen,
+                SoChoNgoi = (int?)v.SoChoNgoi,
+                HinhAnh = GetFullImageUrl(v.AnhRaw)
+            }).ToList();
         }
     }
 }

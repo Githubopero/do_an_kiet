@@ -19,6 +19,9 @@ import Cart from './pages/Customer/Cart';
 import Checkout from './pages/Customer/Checkout';
 import MyOrders from './pages/Customer/MyOrders';
 import Consultation from './pages/customer/Consultation'; // Điều chỉnh đường dẫn cho đúng với thư mục của bạn
+// THÊM DÒNG NÀY (Đảm bảo đúng đường dẫn file BookAppointment bạn đã tạo)
+import BookAppointment from './pages/customer/BookAppointment';
+import CompareCars from './pages/customer/CompareCars';
 
 // Dealer Pages
 import DealerOrders from './pages/Dealer/Orders';
@@ -61,6 +64,9 @@ function App() {
             <Route path="checkout" element={<Checkout />} />
             <Route path="orders" element={<MyOrders />} />
             <Route path="consultation" element={<Consultation />} />
+            {/* THÊM DÒNG NÀY: Route cho khách hàng đặt lịch */}
+            <Route path="book-appointment" element={<BookAppointment />} />
+            <Route path="compare" element={<CompareCars />} />
           </Route>
 
           {/* ==================== DEALER ROUTES ==================== */}
