@@ -6,5 +6,6 @@ namespace Web_ban_xe_VinFast.Services.Interfaces
     {
         Task<List<InventoryDto>> GetInventoryAsync(long dealerId);
         Task UpdateQuantityAsync(long inventoryId, int change);
+        Task UpdateStockAsync(long inventoryId, int change); // Nhập/Xuất kho vật lý
     }
 }

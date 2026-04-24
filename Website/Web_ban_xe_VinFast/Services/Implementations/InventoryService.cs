@@ -15,18 +15,32 @@ namespace Web_ban_xe_VinFast.Services.Implementations
         {
             return await _context.DealerInventories
                 .Include(di => di.Xe)
+                .Include(di => di.PhienBan)
                 .Where(di => di.DaiLyId == dealerId)
                 .Select(di => new InventoryDto
                 {
                     Id = di.Id,
-                    MauXe = di.Xe.MauXe,
-                    //CauHinhXe = di.CauHinhXe,
+                    TenXe = di.Xe.MauXe,
+                    TenPhienBan = di.PhienBan.TenPhienBan, // Ví dụ: "Nâng cao", "Cao cấp"
                     SoLuongTonKho = di.SoLuongTonKho,
+                    SoLuongTamGiu = di.SoLuongTamGiu,
                     CanhBaoTonThap = di.SoLuongTonKho <= (di.NguongCanhBaoTonThap ?? 5)
                 })
                 .ToListAsync();
         }
+        // Nhập hoặc xuất kho vật lý (Cho nút bấm trên giao diện Quản lý kho)
+        public async Task UpdateStockAsync(long inventoryId, int change)
+        {
+            var inventory = await _context.DealerInventories.FindAsync(inventoryId);
+            if (inventory == null) throw new Exception("Không tìm thấy dữ liệu kho");
 
+            inventory.SoLuongTonKho += change;
+
+            // Tránh số âm
+            if (inventory.SoLuongTonKho < 0) inventory.SoLuongTonKho = 0;
+
+            await _context.SaveChangesAsync();
+        }
         public async Task UpdateQuantityAsync(long inventoryId, int change)
         {
             var inventory = await _context.DealerInventories.FindAsync(inventoryId);

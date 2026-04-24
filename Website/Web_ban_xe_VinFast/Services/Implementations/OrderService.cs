@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 using Web_ban_xe_VinFast.DTOs.Dealer;
 using Web_ban_xe_VinFast.DTOs.Order;
 using Web_ban_xe_VinFast.Models;
@@ -115,29 +116,84 @@ namespace Web_ban_xe_VinFast.Services.Implementations
         {
             var query = _context.Orders
         .Include(o => o.NguoiDung)
-        .Include(o => o.OrderItems)
-            .ThenInclude(oi => oi.Xe)
+        .Include(o => o.OrderItems).ThenInclude(oi => oi.Xe)
         .Where(o => o.DaiLyId == dealerId);
 
             if (!string.IsNullOrEmpty(status))
                 query = query.Where(o => o.TrangThaiDonHang == status);
 
-            var orders = await query.OrderByDescending(o => o.ThoiGianTao).ToListAsync();
+            var orders = await query.OrderByDescending(o => o.Id).ToListAsync();
+
+            var allOptions = await _context.Options.ToListAsync();
+            // Giả sử bạn có bảng CarVersions để lấy tên phiên bản
+            var allVersions = await _context.CarVersions.ToListAsync();
 
             return orders.Select(o => new DealerOrderDto
             {
                 Id = o.Id,
-                CustomerName = o.NguoiDung?.HoTen ?? "Khách vãng lai",
+                CustomerName = o.NguoiDung?.HoTen ?? "Khách hàng",
                 Status = o.TrangThaiDonHang,
                 TongTien = o.TongTien,
                 SoTienDatCoc = o.SoTienDatCoc,
                 ThoiGianTao = o.ThoiGianTao ?? DateTime.UtcNow,
-                Items = o.OrderItems.Select(oi => new OrderDetailItemDto
+                Items = o.OrderItems.Select(oi =>
                 {
-                    TenXe = oi.Xe?.MauXe ?? "N/A",
-                    CauHinhXe = oi.CauHinhXe,
-                    Gia = oi.Gia,
-                    SoLuong = oi.SoLuong ?? 1
+                    // Parse JSON cấu hình xe
+                    var configData = new Dictionary<string, string>();
+                    try
+                    {
+                        configData = JsonSerializer.Deserialize<Dictionary<string, string>>(oi.CauHinhXe)
+                                     ?? new Dictionary<string, string>();
+                    }
+                    catch { /* Xử lý nếu JSON lỗi */ }
+                    var displayOptions = new List<OptionDisplayDto>();
+
+                    // Khởi tạo các giá trị mặc định từ bảng CarVersion
+                    long pbId = 0;
+                    string tenPB = "N/A";
+                    decimal giaPB = 0;
+
+                    // 1. Tìm thông tin phiên bản từ phienBanId trong JSON
+                    if (configData.TryGetValue("phienBanId", out var pbIdStr) && long.TryParse(pbIdStr, out pbId))
+                    {
+                        var versionInfo = allVersions.FirstOrDefault(v => v.Id == pbId);
+                        if (versionInfo != null)
+                        {
+                            tenPB = versionInfo.TenPhienBan;
+                            giaPB = versionInfo.GiaCoBan;
+                        }
+                    }
+
+                    // 2. Map các option khác (Màu sắc, pin...) để lấy giá chênh lệch
+                    foreach (var entry in configData)
+                    {
+                        // Bỏ qua các key không phải option cần tính giá (như phienBanId)
+                        if (entry.Key == "phienBanId" || string.IsNullOrEmpty(entry.Value)) continue;
+
+                        // So sánh chính xác hơn bằng cách Trim() và ToLower()
+                        var optValue = entry.Value.Trim().ToLower();
+                        var optInfo = allOptions.FirstOrDefault(x =>
+                            x.XeId == oi.XeId &&
+                            x.TenTuyChon.Trim().ToLower() == optValue);
+
+                        displayOptions.Add(new OptionDisplayDto
+                        {
+                            Nhan = entry.Key,
+                            GiaTri = entry.Value,
+                            GiaChenhLech = optInfo?.AnhHuongDenGia ?? 0
+                        });
+                    }
+
+                    return new OrderDetailItemDto
+                    {
+                        TenXe = oi.Xe?.MauXe ?? "N/A",
+                        PhienBanId = pbId,
+                        TenPhienBan = tenPB,
+                        GiaPhienBan = giaPB,
+                        SoLuong = oi.SoLuong ?? 1,
+                        GiaCuoi = oi.Gia,
+                        ChiTietCauHinh = displayOptions
+                    };
                 }).ToList()
             }).ToList();
         }

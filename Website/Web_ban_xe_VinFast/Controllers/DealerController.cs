@@ -51,9 +51,20 @@ namespace Web_ban_xe_VinFast.Controllers
             return Ok(new { message = "Cập nhật trạng thái thành công" });
         }
         //quản lý tồn kho(dealer staff)
+        // Quản lý tồn kho (Dealer Staff)
         [HttpGet("inventory")]
         public async Task<IActionResult> GetInventory()
             => Ok(await _inventoryService.GetInventoryAsync(User.GetDealerId()));
+
+        [HttpPut("inventory/{id}")]
+        public async Task<IActionResult> UpdateInventory(long id, [FromBody] UpdateQuantityRequest req)
+        {
+            // req.Change có thể là 1 (Nhập) hoặc -1 (Xuất)
+            await _inventoryService.UpdateStockAsync(id, req.Change);
+            return Ok(new { message = "Cập nhật kho thành công" });
+        }
+
+        public class UpdateQuantityRequest { public int Change { get; set; } }
         //quản lý khách hàng(dealer staff)
         [HttpGet("customers")]
         public async Task<IActionResult> GetCustomers()

@@ -14,9 +14,17 @@
     public class OrderDetailItemDto
     {
         public string TenXe { get; set; } = string.Empty;
-        public string TenPhienBan { get; set; } = string.Empty;
-        public string CauHinhXe { get; set; } = string.Empty; // Chứa màu, nội thất...
-        public decimal Gia { get; set; }
+        public long PhienBanId { get; set; } // Giữ lại để xử lý logic kho/hóa đơn
+        public string TenPhienBan { get; set; } = string.Empty;// Để in ra chữ (Eco, Plus, Premium)
+        public decimal GiaPhienBan { get; set; } // Thay cho GiaCoBan của Xe
+        public List<OptionDisplayDto> ChiTietCauHinh { get; set; } = new();
+        public decimal GiaCuoi { get; set; }
         public int SoLuong { get; set; }
+    }
+    public class OptionDisplayDto
+    {
+        public string Nhan { get; set; }      // Ví dụ: "Màu ngoại thất"
+        public string GiaTri { get; set; }   // Ví dụ: "Trắng"
+        public decimal GiaChenhLech { get; set; } // Lấy từ cột AnhHuongDenGia
     }
 }
