@@ -22,6 +22,7 @@ import Consultation from './pages/customer/Consultation'; // Điều chỉnh đ�
 // THÊM DÒNG NÀY (Đảm bảo đúng đường dẫn file BookAppointment bạn đã tạo)
 import BookAppointment from './pages/customer/BookAppointment';
 import CompareCars from './pages/customer/CompareCars';
+import ChatGPT from './pages/customer/ChatGPT';
 
 // Dealer Pages
 import DealerOrders from './pages/Dealer/Orders';
@@ -67,6 +68,9 @@ function App() {
             {/* THÊM DÒNG NÀY: Route cho khách hàng đặt lịch */}
             <Route path="book-appointment" element={<BookAppointment />} />
             <Route path="compare" element={<CompareCars />} />
+            {/* THÊM DÒNG NÀY: Route cho AI Tư vấn */}
+            <Route path="ai-consultant" element={<ChatGPT />} />
+            
           </Route>
 
           {/* ==================== DEALER ROUTES ==================== */}

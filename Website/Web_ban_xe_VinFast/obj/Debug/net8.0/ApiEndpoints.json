@@ -697,6 +697,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ChatController",
+    "Method": "Chat",
+    "RelativePath": "api/chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ChatController\u002BChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_ban_xe_VinFast.Controllers.CustomerConsultationController",
     "Method": "Create",
     "RelativePath": "api/consultations",

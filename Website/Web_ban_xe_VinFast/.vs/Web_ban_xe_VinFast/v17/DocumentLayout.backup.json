@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\models\\vinfastdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:models\\vinfastdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\services\\interfaces\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:services\\interfaces\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\dealer\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -165,10 +173,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\carlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:dtos\\car\\carlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8144A4D3-BB3A-4B98-92FF-99048908F3CA}|Web_ban_xe_VinFast.csproj|c:\\users\\my pc\\desktop\\\u0111\u1ED3 \u00E1n\\website\\web_ban_xe_vinfast\\dtos\\car\\carimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -386,24 +390,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InventoryService.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\InventoryService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\InventoryService.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\InventoryService.cs",
-              "RelativeToolTip": "Services\\Implementations\\InventoryService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAxwBYAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:42:36.057Z",
+              "WhenOpened": "2026-04-24T16:52:55.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "DealerController.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\DealerController.cs",
               "RelativeDocumentMoniker": "Controllers\\DealerController.cs",
@@ -411,12 +415,11 @@
               "RelativeToolTip": "Controllers\\DealerController.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAUwEIAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:18:20.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:18:20.468Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "DealerInventory.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\DealerInventory.cs",
               "RelativeDocumentMoniker": "Models\\DealerInventory.cs",
@@ -424,12 +427,11 @@
               "RelativeToolTip": "Models\\DealerInventory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T13:03:15.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T13:03:15.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\Car.cs",
               "RelativeDocumentMoniker": "Models\\Car.cs",
@@ -437,12 +439,11 @@
               "RelativeToolTip": "Models\\Car.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T00:51:10.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T00:51:10.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\OrderService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\OrderService.cs",
@@ -450,12 +451,11 @@
               "RelativeToolTip": "Services\\Implementations\\OrderService.cs",
               "ViewState": "AgIAANQAAAAAAAAAAAAswMUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:49:54.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:49:54.438Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CarService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CarService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CarService.cs",
@@ -463,12 +463,11 @@
               "RelativeToolTip": "Services\\Implementations\\CarService.cs",
               "ViewState": "AgIAACwBAAAAAAAAAAAUwFIBAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:41:09.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:41:09.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "CarVersion.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\CarVersion.cs",
               "RelativeDocumentMoniker": "Models\\CarVersion.cs",
@@ -476,25 +475,62 @@
               "RelativeToolTip": "Models\\CarVersion.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T08:40:45.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T08:40:45.046Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "VinFastDbContext.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\VinFastDbContext.cs",
               "RelativeDocumentMoniker": "Models\\VinFastDbContext.cs",
               "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\VinFastDbContext.cs",
               "RelativeToolTip": "Models\\VinFastDbContext.cs",
-              "ViewState": "AgIAAGABAAAAAAAAAAAAAIQBAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAGABAAAAAAAAAAAAAH8BAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-04T10:33:21.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwHoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T12:52:59.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-04T12:44:47.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InventoryService.cs",
+              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\InventoryService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\InventoryService.cs",
+              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\InventoryService.cs",
+              "RelativeToolTip": "Services\\Implementations\\InventoryService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAxwBYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T13:42:36.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "Controllers\\CustomerController.cs",
@@ -502,12 +538,11 @@
               "RelativeToolTip": "Controllers\\CustomerController.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAkwDoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T13:25:05.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T13:25:05.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "IInventoryService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IInventoryService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IInventoryService.cs",
@@ -515,25 +550,11 @@
               "RelativeToolTip": "Services\\Interfaces\\IInventoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T13:40:15.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T13:40:15.012Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAIwHoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T12:52:59.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "InventoryDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\InventoryDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Dealer\\InventoryDto.cs",
@@ -541,12 +562,11 @@
               "RelativeToolTip": "DTOs\\Dealer\\InventoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:17:34.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:17:34.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "DealerOrderDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\DealerOrderDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Dealer\\DealerOrderDto.cs",
@@ -554,12 +574,11 @@
               "RelativeToolTip": "DTOs\\Dealer\\DealerOrderDto.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAwwBIAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T09:17:08.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T09:17:08.384Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Option.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\Option.cs",
               "RelativeDocumentMoniker": "Models\\Option.cs",
@@ -567,12 +586,11 @@
               "RelativeToolTip": "Models\\Option.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAkwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T11:24:55.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T11:24:55.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IOrderService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IOrderService.cs",
@@ -584,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "OrderItemDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderItemDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\OrderItemDto.cs",
@@ -592,12 +610,11 @@
               "RelativeToolTip": "DTOs\\Order\\OrderItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:16:58.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:16:58.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "OrderDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\OrderDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\OrderDto.cs",
@@ -605,12 +622,11 @@
               "RelativeToolTip": "DTOs\\Order\\OrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T11:16:39.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T11:16:39.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "Models\\OrderItem.cs",
@@ -622,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ICarService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICarService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICarService.cs",
@@ -634,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "CarImage.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\CarImage.cs",
               "RelativeDocumentMoniker": "Models\\CarImage.cs",
@@ -646,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "CarController.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\CarController.cs",
               "RelativeDocumentMoniker": "Controllers\\CarController.cs",
@@ -658,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "CarCompareDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Customer\\CarCompareDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Customer\\CarCompareDto.cs",
@@ -670,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "IAppointmentService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAppointmentService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAppointmentService.cs",
@@ -682,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "IUserManagementService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IUserManagementService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IUserManagementService.cs",
@@ -694,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "AppointmentCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Customer\\AppointmentCreateDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Customer\\AppointmentCreateDto.cs",
@@ -706,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "AppointmentService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AppointmentService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\AppointmentService.cs",
@@ -718,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\UserService.cs",
@@ -730,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "CustomerConsultationController.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\CustomerConsultationController.cs",
               "RelativeDocumentMoniker": "Controllers\\CustomerConsultationController.cs",
@@ -742,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
@@ -754,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IUserService.cs",
@@ -766,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "Controllers\\CartController.cs",
@@ -778,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "AppointmentDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\AppointmentDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Dealer\\AppointmentDto.cs",
@@ -790,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "ConsultationService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\ConsultationService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\ConsultationService.cs",
@@ -802,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "Models\\Appointment.cs",
@@ -814,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "Consultation.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\Consultation.cs",
               "RelativeDocumentMoniker": "Models\\Consultation.cs",
@@ -826,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "IConsultationService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IConsultationService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IConsultationService.cs",
@@ -838,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "ConsultationDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\ConsultationDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Dealer\\ConsultationDto.cs",
@@ -850,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CustomerService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CustomerService.cs",
@@ -862,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "CarConfigService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CarConfigService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CarConfigService.cs",
@@ -874,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
@@ -886,19 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-04T12:44:47.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "CarImageDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarImageDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarImageDto.cs",
@@ -910,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "CarListDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarListDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarListDto.cs",
@@ -922,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "CarImageService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CarImageService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CarImageService.cs",
@@ -934,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "AdminDashboardService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AdminDashboardService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\AdminDashboardService.cs",
@@ -946,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "Web_ban_xe_VinFast.csproj",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
               "RelativeDocumentMoniker": "Web_ban_xe_VinFast.csproj",
@@ -958,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "ICarImageService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICarImageService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICarImageService.cs",
@@ -970,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "UploadCarImageRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\CarImage\\UploadCarImageRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\CarImage\\UploadCarImageRequest.cs",
@@ -982,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "CarImageDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\CarImage\\CarImageDto.cs",
               "RelativeDocumentMoniker": "DTOs\\CarImage\\CarImageDto.cs",
@@ -994,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAuthService.cs",
@@ -1006,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "ICarConfigService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICarConfigService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICarConfigService.cs",
@@ -1018,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "CarConfigDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CarConfigDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\CarConfigDto.cs",
@@ -1030,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "UpdateCarConfigRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\UpdateCarConfigRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\UpdateCarConfigRequest.cs",
@@ -1042,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "CarConfigurationDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarConfigurationDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarConfigurationDto.cs",
@@ -1054,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "CarConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\CarConfiguration.cs",
               "RelativeDocumentMoniker": "Models\\CarConfiguration.cs",
@@ -1066,7 +1070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "OptionService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\OptionService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\OptionService.cs",
@@ -1078,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "OptionDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\OptionDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\OptionDto.cs",
@@ -1090,7 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "IOptionService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IOptionService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IOptionService.cs",
@@ -1102,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "CarVersionDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarVersionDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarVersionDto.cs",
@@ -1114,7 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -1126,7 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "UserManagementService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\UserManagementService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\UserManagementService.cs",
@@ -1138,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "ConfigPriceRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\ConfigPriceRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\ConfigPriceRequest.cs",
@@ -1150,7 +1154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\AuthService.cs",
@@ -1162,7 +1166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "CarAdminDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarAdminDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarAdminDto.cs",
@@ -1174,7 +1178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "CarDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarDetailDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarDetailDto.cs",
@@ -1186,7 +1190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "PriceDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\PriceDetailDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\PriceDetailDto.cs",
@@ -1198,7 +1202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "UpdateUserRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\UpdateUserRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\UpdateUserRequest.cs",
@@ -1210,7 +1214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -1222,7 +1226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\UserDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\UserDto.cs",
@@ -1234,7 +1238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Auth\\RegisterRequest.cs",
@@ -1246,7 +1250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "ConsultationRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Consultation\\ConsultationRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Consultation\\ConsultationRequest.cs",
@@ -1258,7 +1262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "CheckoutRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CheckoutRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\CheckoutRequest.cs",
@@ -1270,7 +1274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "CustomerInfoRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CustomerInfoRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\CustomerInfoRequest.cs",
@@ -1282,7 +1286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "CartService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Implementations\\CartService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CartService.cs",
@@ -1294,7 +1298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "ConsultationResponse.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Consultation\\ConsultationResponse.cs",
               "RelativeDocumentMoniker": "DTOs\\Consultation\\ConsultationResponse.cs",
@@ -1306,7 +1310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "CreateUserRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateUserRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\CreateUserRequest.cs",
@@ -1318,7 +1322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\AuthResponse.cs",
               "RelativeDocumentMoniker": "DTOs\\Auth\\AuthResponse.cs",
@@ -1330,7 +1334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "CreateCarRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateCarRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\CreateCarRequest.cs",
@@ -1342,7 +1346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Auth\\LoginRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Auth\\LoginRequest.cs",
@@ -1354,7 +1358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "CreateCarConfigRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\CreateCarConfigRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\CreateCarConfigRequest.cs",
@@ -1366,7 +1370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "DashboardDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\DashboardDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\DashboardDto.cs",
@@ -1378,7 +1382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "TopCarDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Admin\\TopCarDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Admin\\TopCarDto.cs",
@@ -1390,7 +1394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "CartItemDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\CartItemDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\CartItemDto.cs",
@@ -1402,7 +1406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "AddToCartRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Order\\AddToCartRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Order\\AddToCartRequest.cs",
@@ -1414,7 +1418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "UpdateStatusRequest.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\UpdateStatusRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\Dealer\\UpdateStatusRequest.cs",
@@ -1426,7 +1430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "CustomerDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDetailDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Dealer\\CustomerDetailDto.cs",
@@ -1438,7 +1442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "CustomerDto.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Dealer\\CustomerDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Dealer\\CustomerDto.cs",
@@ -1450,7 +1454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "CarFilterParams.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\DTOs\\Car\\CarFilterParams.cs",
               "RelativeDocumentMoniker": "DTOs\\Car\\CarFilterParams.cs",
@@ -1462,7 +1466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "IAdminDashboardService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IAdminDashboardService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAdminDashboardService.cs",
@@ -1474,7 +1478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "ICustomerService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICustomerService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICustomerService.cs",
@@ -1486,7 +1490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "ICartService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\ICartService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICartService.cs",
@@ -1498,7 +1502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "IDealerService.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Services\\Interfaces\\IDealerService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IDealerService.cs",
@@ -1510,7 +1514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "ClaimsPrincipalExtensions.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Helpers\\ClaimsPrincipalExtensions.cs",
               "RelativeDocumentMoniker": "Helpers\\ClaimsPrincipalExtensions.cs",
@@ -1522,7 +1526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "JwtHelper.cs",
               "DocumentMoniker": "C:\\Users\\my pc\\Desktop\\\u0110\u1ED3 \u00E1n\\Website\\Web_ban_xe_VinFast\\Helpers\\JwtHelper.cs",
               "RelativeDocumentMoniker": "Helpers\\JwtHelper.cs",

@@ -36,6 +36,10 @@ export default function Navbar() {
               Đặt lịch lái thử
             </Link>
             <Link to="/customer/compare" className="hover:underline">So sánh xe</Link>
+            {/* THÊM DÒNG NÀY: Link dẫn đến AI Tư vấn */}
+            <Link to="/customer/ai-consultant" className="hover:underline">
+              Gợi ý cấu hình xe
+            </Link>
           </div>
         )}
 
