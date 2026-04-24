@@ -10,10 +10,14 @@ public partial class DealerInventory
     public long DaiLyId { get; set; }
 
     public long XeId { get; set; }
+    // Thêm mới
+    public long PhienBanId { get; set; }
 
     //public string CauHinhXe { get; set; } = null!;
 
     public int SoLuongTonKho { get; set; }
+    // Thêm mới
+    public int SoLuongTamGiu { get; set; }
 
     public int? NguongCanhBaoTonThap { get; set; }
 
@@ -22,4 +26,6 @@ public partial class DealerInventory
     public virtual Dealer DaiLy { get; set; } = null!;
 
     public virtual Car Xe { get; set; } = null!;
+    // Thêm mới để liên kết với phiên bản
+    public virtual CarVersion PhienBan { get; set; } = null!;
 }

@@ -114,20 +114,32 @@ namespace Web_ban_xe_VinFast.Services.Implementations
         public async Task<List<DealerOrderDto>> GetDealerOrdersAsync(long dealerId, string? status)
         {
             var query = _context.Orders
-                .Include(o => o.NguoiDung)
-                .Where(o => o.DaiLyId == dealerId);
+        .Include(o => o.NguoiDung)
+        .Include(o => o.OrderItems)
+            .ThenInclude(oi => oi.Xe)
+        .Where(o => o.DaiLyId == dealerId);
 
             if (!string.IsNullOrEmpty(status))
                 query = query.Where(o => o.TrangThaiDonHang == status);
 
-            return await query.Select(o => new DealerOrderDto
+            var orders = await query.OrderByDescending(o => o.ThoiGianTao).ToListAsync();
+
+            return orders.Select(o => new DealerOrderDto
             {
                 Id = o.Id,
-                CustomerName = o.NguoiDung.HoTen,
+                CustomerName = o.NguoiDung?.HoTen ?? "Khách vãng lai",
                 Status = o.TrangThaiDonHang,
                 TongTien = o.TongTien,
-                ThoiGianTao = o.ThoiGianTao ?? DateTime.UtcNow
-            }).ToListAsync();
+                SoTienDatCoc = o.SoTienDatCoc,
+                ThoiGianTao = o.ThoiGianTao ?? DateTime.UtcNow,
+                Items = o.OrderItems.Select(oi => new OrderDetailItemDto
+                {
+                    TenXe = oi.Xe?.MauXe ?? "N/A",
+                    CauHinhXe = oi.CauHinhXe,
+                    Gia = oi.Gia,
+                    SoLuong = oi.SoLuong ?? 1
+                }).ToList()
+            }).ToList();
         }
 
         public async Task ConfirmOrderAsync(long orderId, long dealerId)
@@ -151,22 +163,68 @@ namespace Web_ban_xe_VinFast.Services.Implementations
 
         public async Task UpdateOrderStatusAsync(long orderId, UpdateStatusRequest req, long dealerId)
         {
-            var order = await _context.Orders.FindAsync(orderId);
-            if (order == null || order.DaiLyId != dealerId)
-                throw new Exception("Không có quyền cập nhật đơn này");
+            // Load đơn hàng kèm theo chi tiết xe và phiên bản
+            var order = await _context.Orders
+                .Include(o => o.OrderItems)
+                .FirstOrDefaultAsync(o => o.Id == orderId && o.DaiLyId == dealerId);
 
-            order.TrangThaiDonHang = req.NewStatus;
-            order.UpdatedAt = DateTime.UtcNow;
+            if (order == null) throw new Exception("Đơn hàng không tồn tại");
 
-            _context.OrderStatusHistories.Add(new OrderStatusHistory
+            string oldStatus = order.TrangThaiDonHang;
+            string newStatus = req.NewStatus;
+
+            // Chỉ xử lý kho nếu trạng thái thực sự thay đổi
+            if (oldStatus != newStatus)
             {
-                DonHangId = orderId,
-                TrangThai = req.NewStatus,
-                NguoiCapNhat = dealerId,
-                ThoiGianCapNhat = DateTime.UtcNow
-            });
+                foreach (var item in order.OrderItems)
+                {
+                    // Tìm sản phẩm trong kho của đại lý dựa trên Xe và Phiên bản
+                    // Lưu ý: item.PhienBanId cần được lưu từ lúc khách thêm vào giỏ hàng
+                    var inventory = await _context.DealerInventories
+                        .FirstOrDefaultAsync(i => i.DaiLyId == dealerId
+                                             && i.XeId == item.XeId
+                                             /* && i.PhienBanId == item.PhienBanId */); // Mở comment này khi bạn đã thêm PhienBanId vào OrderItem
 
-            await _context.SaveChangesAsync();
+                    if (inventory != null)
+                    {
+                        int quantity = item.SoLuong ?? 1;
+
+                        // 1. Khi xác nhận đơn (Confirmed): Tăng số lượng tạm giữ
+                        if (oldStatus == "Pending" && newStatus == "Confirmed")
+                        {
+                            inventory.SoLuongTamGiu += quantity;
+                        }
+
+                        // 2. Khi bàn giao xe (Delivered): Trừ tồn kho thực tế và giải phóng tạm giữ
+                        else if (newStatus == "Delivered")
+                        {
+                            inventory.SoLuongTonKho -= quantity;
+                            inventory.SoLuongTamGiu -= quantity;
+                        }
+
+                        // 3. Khi khách hủy đơn (Cancelled): Trừ số lượng tạm giữ (nếu trước đó đã confirmed)
+                        else if (newStatus == "Cancelled" && (oldStatus == "Confirmed" || oldStatus == "Paid"))
+                        {
+                            inventory.SoLuongTamGiu -= quantity;
+                            if (inventory.SoLuongTamGiu < 0) inventory.SoLuongTamGiu = 0; // Guard clause
+                        }
+                    }
+                }
+
+                // Cập nhật trạng thái và lưu lịch sử
+                order.TrangThaiDonHang = newStatus;
+                order.UpdatedAt = DateTime.UtcNow;
+
+                _context.OrderStatusHistories.Add(new OrderStatusHistory
+                {
+                    DonHangId = orderId,
+                    TrangThai = newStatus,
+                    NguoiCapNhat = dealerId,
+                    ThoiGianCapNhat = DateTime.UtcNow
+                });
+
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

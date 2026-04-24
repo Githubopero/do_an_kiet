@@ -24,6 +24,10 @@ public partial class CarVersion
     public bool IsDeleted { get; set; } = false;
 
     public virtual ICollection<CarConfiguration> CarConfigurations { get; set; } = new List<CarConfiguration>();
+    // Thêm mới liên kết ngược lại bảng kho
+    public virtual ICollection<DealerInventory> DealerInventories { get; set; } = new List<DealerInventory>();
+    // THÊM DÒNG NÀY: Liên kết ngược lại các mục trong đơn hàng
+    public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
     public virtual Car Xe { get; set; } = null!;
 }

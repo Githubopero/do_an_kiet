@@ -360,12 +360,20 @@ public partial class VinFastDbContext : DbContext
             entity.HasIndex(e => e.DaiLyId, "dai_ly_id");
 
             entity.HasIndex(e => e.XeId, "xe_id");
+            // Thêm index cho phien_ban_id mới
+            entity.HasIndex(e => e.PhienBanId, "phien_ban_id");
 
             entity.Property(e => e.Id).HasColumnName("id");
             //entity.Property(e => e.CauHinhXe)
             //    .HasColumnType("json")
             //    .HasColumnName("cau_hinh_xe");
             entity.Property(e => e.DaiLyId).HasColumnName("dai_ly_id");
+            // Cấu hình cho 2 cột mới
+            entity.Property(e => e.PhienBanId).HasColumnName("phien_ban_id");
+            entity.Property(e => e.SoLuongTamGiu)
+                .HasDefaultValueSql("'0'")
+                .HasColumnName("so_luong_tam_giu");
+
             entity.Property(e => e.NguongCanhBaoTonThap)
                 .HasDefaultValueSql("'5'")
                 .HasColumnName("nguong_canh_bao_ton_thap");
@@ -384,6 +392,12 @@ public partial class VinFastDbContext : DbContext
                 .HasForeignKey(d => d.XeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("dealer_inventory_ibfk_2");
+
+            // QUAN TRỌNG: Thêm cấu hình khóa ngoại mới tới CarVersion
+            entity.HasOne(d => d.PhienBan).WithMany(p => p.DealerInventories)
+                .HasForeignKey(d => d.PhienBanId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("fk_inventory_version");
         });
 
         modelBuilder.Entity<Option>(entity =>
@@ -515,6 +529,14 @@ public partial class VinFastDbContext : DbContext
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("so_luong");
             entity.Property(e => e.XeId).HasColumnName("xe_id");
+            entity.Property(e => e.PhienBanId).HasColumnName("phien_ban_id");
+
+            // Cấu hình mối quan hệ
+            entity.HasOne(d => d.PhienBan)            // Một dòng đơn hàng có 1 phiên bản xe
+                .WithMany(p => p.OrderItems)         // Một phiên bản xe có trong nhiều dòng đơn hàng
+                .HasForeignKey(d => d.PhienBanId)    // Khóa ngoại là phien_ban_id
+                .OnDelete(DeleteBehavior.Restrict)   // Không cho xóa phiên bản nếu đã có đơn hàng
+                .HasConstraintName("fk_order_item_version");
 
             entity.HasOne(d => d.DonHang).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.DonHangId)

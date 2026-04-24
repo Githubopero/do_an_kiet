@@ -16,6 +16,8 @@ public partial class OrderItem
     public decimal Gia { get; set; }
 
     public int? SoLuong { get; set; }
+    public long PhienBanId { get; set; } // Thêm dòng này
+    public virtual CarVersion PhienBan { get; set; } = null!; // Thêm dòng này
 
     public virtual Order DonHang { get; set; } = null!;
 
