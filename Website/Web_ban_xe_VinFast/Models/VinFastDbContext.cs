@@ -592,7 +592,7 @@ public partial class VinFastDbContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.DonHangId).HasColumnName("don_hang_id");
             entity.Property(e => e.DuongDanThanhToan)
-                .HasMaxLength(500)
+                .HasColumnType("text")
                 .HasColumnName("duong_dan_thanh_toan");
             entity.Property(e => e.MaGiaoDich)
                 .HasMaxLength(100)

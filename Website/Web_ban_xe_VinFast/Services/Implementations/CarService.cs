@@ -86,10 +86,11 @@ namespace Web_ban_xe_VinFast.Services.Implementations
         public async Task<CarDetailDto> GetCarDetailAsync(long carId)
         {
             var car = await _context.Cars
-                .Include(c => c.CarVersions)
-                .Include(c => c.CarImages)
-                .Include(c => c.CarConfigurations)
-                .FirstOrDefaultAsync(c => c.Id == carId);
+        .Include(c => c.CarVersions)
+        .Include(x => x.Options)
+        .Include(c => c.CarImages)
+        .Include(c => c.CarConfigurations)
+        .FirstOrDefaultAsync(c => c.Id == carId);
 
             if (car == null || car.TrangThaiHoatDong != "active")
                 throw new Exception("Xe không tồn tại hoặc đã ngừng bán");
@@ -99,6 +100,15 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 Id = car.Id,
                 MauXe = car.MauXe,
                 MoTa = car.MoTa,
+
+                // ĐỒNG BỘ LOGIC LẤY ẢNH CHÍNH TẠI ĐÂY
+                DuongDanHinhAnhChinh = GetFullImageUrl(
+                    car.CarImages
+                       .OrderBy(i => i.ThuTuSapXep)
+                       .Select(i => i.DuongDanHinhAnh)
+                       .FirstOrDefault()
+                ),
+
                 PhienBan = car.CarVersions.Select(v => new CarVersionDto
                 {
                     Id = v.Id,
@@ -107,11 +117,26 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                     DungLuongPin = v.DungLuongPin,
                     QuangDuongDiChuyen = v.QuangDuongDiChuyen
                 }).ToList(),
+
+                Options = car.Options
+                    .Where(opt => opt.TrangThaiKhaDung == true)
+                    .Select(opt => new Web_ban_xe_VinFast.DTOs.Admin.OptionDto
+                    {
+                        Id = opt.Id,
+                        XeId = opt.XeId,
+                        LoaiTuyChon = opt.LoaiTuyChon,
+                        TenTuyChon = opt.TenTuyChon,
+                        AnhHuongDenGia = opt.AnhHuongDenGia,
+                        TrangThaiKhaDung = opt.TrangThaiKhaDung
+                    }).ToList(),
+
+                // Danh sách toàn bộ ảnh (để nếu sau này bạn muốn làm slider)
                 HinhAnh = car.CarImages.Select(i => new CarImageDto
                 {
                     DuongDanHinhAnh = GetFullImageUrl(i.DuongDanHinhAnh),
                     LoaiAnh = i.LoaiAnh
                 }).ToList(),
+
                 CauHinhCoSan = car.CarConfigurations.Select(cfg => new CarConfigurationDto
                 {
                     MauNgoaiThat = cfg.MauNgoaiThat,
@@ -125,33 +150,57 @@ namespace Web_ban_xe_VinFast.Services.Implementations
 
         public async Task<PriceDetailDto> CalculatePriceAsync(ConfigPriceRequest req)
         {
-            // Log để debug (tạm thời)
-            Console.WriteLine($"[CalculatePrice] XeId={req.XeId}, PhienBanId={req.PhienBanId}, " +
-                              $"NgoaiThat={req.MauNgoaiThat}, NoiThat={req.MauNoiThat}, " +
-                              $"Pin={req.LoaiPin}, NoiThatType={req.LoaiNoiThat}");
+            // Debug: Kiểm tra xem có tồn tại phiên bản này không, chưa cần check XeId vội
+            var version = await _context.CarVersions.FindAsync(req.PhienBanId);
 
-            var config = await _context.CarConfigurations
-                .FirstOrDefaultAsync(c =>
-                    c.XeId == req.XeId &&
-                    c.PhienBanId == req.PhienBanId &&
-                    c.MauNgoaiThat.Trim().ToLower() == req.MauNgoaiThat.Trim().ToLower() &&
-                    c.MauNoiThat.Trim().ToLower() == req.MauNoiThat.Trim().ToLower() &&
-                    c.LoaiPin.Trim().ToLower() == req.LoaiPin.Trim().ToLower() &&
-                    c.LoaiNoiThat.Trim().ToLower() == req.LoaiNoiThat.Trim().ToLower());
+            if (version == null)
+                throw new Exception($"Không tìm thấy phiên bản ID {req.PhienBanId} trong hệ thống");
 
-            if (config == null)
+            if (version.XeId != req.XeId)
+                throw new Exception($"Phiên bản ID {req.PhienBanId} không thuộc về xe ID {req.XeId}");
+            
+
+            if (version == null) throw new Exception("Phiên bản xe không tồn tại");
+
+            decimal basePrice = version.GiaCoBan;
+            decimal optionsPrice = 0;
+
+            // 2. Danh sách các loại tùy chọn (SỬA LẠI KEY Ở ĐÂY)
+            // Key bên trái phải khớp với giá trị trong cột LoaiTuyChon của DB
+            var selectedOptions = new List<(string Category, string Value)>
+    {
+        ("exterior_color", req.MauNgoaiThat),
+        ("interior_color", req.MauNoiThat),
+        ("battery_type", req.LoaiPin),
+        ("interior_type", req.LoaiNoiThat)
+    };
+
+            // 3. Cộng dồn giá từ bảng Options
+            foreach (var opt in selectedOptions)
             {
-                // Trả về lỗi rõ ràng thay vì throw exception gây 500
-                throw new Exception($"Không tìm thấy cấu hình phù hợp. " +
-                    $"XeId={req.XeId}, PhienBan={req.PhienBanId}, " +
-                    $"Ngoại={req.MauNgoaiThat}, Nội={req.MauNoiThat}, Pin={req.LoaiPin}");
+                if (!string.IsNullOrEmpty(opt.Value))
+                {
+                    var optionData = await _context.Options
+                        .FirstOrDefaultAsync(o =>
+                            o.XeId == req.XeId &&
+                            o.LoaiTuyChon.ToLower() == opt.Category.ToLower() &&
+                            o.TenTuyChon.ToLower() == opt.Value.ToLower() &&
+                            o.TrangThaiKhaDung == true);
+
+                    if (optionData != null)
+                    {
+                        // Cộng dồn giá của từng option vào tổng phí
+                        optionsPrice += optionData.AnhHuongDenGia ?? 0;
+                    }
+                }
             }
 
+            // 4. Trả về kết quả tổng hợp
             return new PriceDetailDto
             {
-                GiaCoBan = config.TongGia,
-                PhiOption = 0,
-                TongGia = config.TongGia
+                GiaCoBan = basePrice,
+                PhiOption = optionsPrice,
+                TongGia = basePrice + optionsPrice // Tổng giá cuối cùng
             };
         }
 

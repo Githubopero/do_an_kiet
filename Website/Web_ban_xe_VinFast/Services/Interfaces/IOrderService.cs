@@ -13,5 +13,10 @@ namespace Web_ban_xe_VinFast.Services.Interfaces
         Task<List<DealerOrderDto>> GetDealerOrdersAsync(long dealerId, string? status);
         Task ConfirmOrderAsync(long orderId, long dealerId);
         Task UpdateOrderStatusAsync(long orderId, UpdateStatusRequest req, long dealerId);
+
+
+        //tích hợp thanh toán vnpay
+        Task<string> CreatePaymentUrl(long orderId, HttpContext context);
+        Task<bool> ProcessVnpayIpn(IQueryCollection vnpayData);
     }
 }

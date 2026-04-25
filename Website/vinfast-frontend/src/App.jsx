@@ -23,6 +23,8 @@ import Consultation from './pages/customer/Consultation'; // Điều chỉnh đ�
 import BookAppointment from './pages/customer/BookAppointment';
 import CompareCars from './pages/customer/CompareCars';
 import ChatGPT from './pages/customer/ChatGPT';
+// import PaymentCallback from './pages/Customer/PaymentCallback'; 
+import PaymentSuccess from './pages/Customer/PaymentSuccess';
 
 // Dealer Pages
 import DealerOrders from './pages/Dealer/Orders';
@@ -64,6 +66,12 @@ function App() {
             <Route path="cart" element={<Cart />} />
             <Route path="checkout" element={<Checkout />} />
             <Route path="orders" element={<MyOrders />} />
+            
+            {/* THÊM DÒNG NÀY: Route xử lý sau khi thanh toán VNPAY */}
+  {/* <Route path="payment-success" element={<PaymentCallback />} /> */}
+  {/* Thêm route mới này vào */}
+  <Route path="payment-success" element={<PaymentSuccess />} />
+
             <Route path="consultation" element={<Consultation />} />
             {/* THÊM DÒNG NÀY: Route cho khách hàng đặt lịch */}
             <Route path="book-appointment" element={<BookAppointment />} />

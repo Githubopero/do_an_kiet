@@ -12,25 +12,50 @@ export default function Checkout() {
   });
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
     
-    try {
-      // Bước 1: Tạo đơn hàng - Tự động gán DaiLyId = 1
-      await api.post('/orders/checkout', { 
-        daiLyId: 1   // ← Tự động gán đại lý mặc định
-      });
+  //   try {
+  //     // Bước 1: Tạo đơn hàng - Tự động gán DaiLyId = 1
+  //     await api.post('/orders/checkout', { 
+  //       daiLyId: 1   // ← Tự động gán đại lý mặc định
+  //     });
       
-      // Bước 2: Lưu thông tin khách hàng
-      await api.post('/orders/customer-info', form);
+  //     // Bước 2: Lưu thông tin khách hàng
+  //     await api.post('/orders/customer-info', form);
       
-      alert('Đặt hàng thành công!');
-      navigate('/customer/orders');
-    } catch (err) {
-      console.error(err);
-      alert(err.response?.data?.message || 'Đặt hàng thất bại. Vui lòng thử lại!');
+  //     alert('Đặt hàng thành công!');
+  //     navigate('/customer/orders');
+  //   } catch (err) {
+  //     console.error(err);
+  //     alert(err.response?.data?.message || 'Đặt hàng thất bại. Vui lòng thử lại!');
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    // 1. Tạo đơn hàng và lấy OrderId trả về từ Backend
+    const orderRes = await api.post('/orders/checkout', { daiLyId: 1 });
+    const orderId = orderRes.data.id; 
+
+    // 2. Lưu thông tin khách hàng
+    await api.post('/orders/customer-info', form);
+
+    // 3. Gọi API lấy URL thanh toán VNPAY (Endpoint mới ta vừa thêm ở .NET)
+    const paymentRes = await api.post(`/orders/${orderId}/payment-url`);
+    
+    if (paymentRes.data.url) {
+      // Chuyển hướng người dùng sang cổng VNPAY
+      window.location.href = paymentRes.data.url;
+    } else {
+      alert('Không thể tạo liên kết thanh toán.');
     }
-  };
+  } catch (err) {
+    console.error("Chi tiết lỗi:", err.response?.data); // Xem log này để biết lỗi cụ thể từ Server
+    alert(err.response?.data?.message || 'Có lỗi xảy ra. Vui lòng thử lại!');
+  }
+};
 
   return (
     <div className="max-w-2xl mx-auto">

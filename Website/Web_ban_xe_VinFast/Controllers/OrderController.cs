@@ -29,5 +29,26 @@ namespace Web_ban_xe_VinFast.Controllers
         [HttpGet("my")]
         public async Task<IActionResult> GetMyOrders()
             => Ok(await _orderService.GetMyOrdersAsync(User.GetUserId()));
+
+
+        //tích hợp thanh toán vnpay
+        [HttpPost("{id}/payment-url")]
+        public async Task<IActionResult> GetPaymentUrl(long id)
+        {
+            // Tạo URL thanh toán cho đơn hàng
+            var url = await _orderService.CreatePaymentUrl(id, HttpContext);
+            return Ok(new { url });
+        }
+
+        // Endpoint này không yêu cầu Authorize vì VNPAY Server sẽ gọi vào
+        [AllowAnonymous]
+        [HttpGet("vnpay-ipn")]
+        public async Task<IActionResult> VnpayIpn()
+        {
+            var result = await _orderService.ProcessVnpayIpn(Request.Query);
+            if (result) return Ok(new { RspCode = "00", Message = "Confirm Success" });
+            return BadRequest(new { RspCode = "99", Message = "Invalid Signature" });
+        }
     }
+
 }

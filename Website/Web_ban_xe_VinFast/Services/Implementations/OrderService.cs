@@ -4,20 +4,27 @@ using Web_ban_xe_VinFast.DTOs.Dealer;
 using Web_ban_xe_VinFast.DTOs.Order;
 using Web_ban_xe_VinFast.Models;
 using Web_ban_xe_VinFast.Services.Interfaces;
+using Web_ban_xe_VinFast.Helpers;
 
 namespace Web_ban_xe_VinFast.Services.Implementations
 {
     public class OrderService : IOrderService
     {
         private readonly VinFastDbContext _context;
-
-        public OrderService(VinFastDbContext context) => _context = context;
+        private readonly IConfiguration _config;
+        public OrderService(VinFastDbContext context, IConfiguration config)
+        {
+            _context = context;
+            _config = config;
+        }
 
         public async Task<OrderDto> CreateOrderFromCartAsync(long userId, CheckoutRequest req)
         {
             var cartItems = await _context.CartItems
                 .Where(c => c.NguoiDungId == userId)
                 .ToListAsync();
+            // Khai báo option để đọc được cả chữ hoa lẫn chữ thường
+            var jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
             if (!cartItems.Any()) throw new Exception("Giỏ hàng trống");
             // Tự động gán DaiLyId = 1 nếu không có
@@ -37,10 +44,41 @@ namespace Web_ban_xe_VinFast.Services.Implementations
 
             foreach (var item in cartItems)
             {
+                long phienBanId = 0;
+                try
+                {
+                    // Cách 1: Nếu bạn có Class ConfigPriceRequest (Khuyên dùng)
+                    // var config = JsonSerializer.Deserialize<Web_ban_xe_VinFast.DTOs.Order.ConfigPriceRequest>(item.CauHinhXe, jsonOptions);
+                    // if (config != null) phienBanId = config.PhienBanId;
+
+                    // Cách 2: Dùng JsonDocument (Linh hoạt, không cần tạo class mới)
+                    using (JsonDocument doc = JsonDocument.Parse(item.CauHinhXe))
+                    {
+                        JsonElement root = doc.RootElement;
+                        // Kiểm tra cả 'PhienBanId' và 'phienBanId'
+                        if (root.TryGetProperty("PhienBanId", out JsonElement pbElement) ||
+                            root.TryGetProperty("phienBanId", out pbElement))
+                        {
+                            phienBanId = pbElement.GetInt64();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Log lỗi nếu cần: Console.WriteLine(ex.Message);
+                }
+
+                // KIỂM TRA QUAN TRỌNG: Nếu phienBanId vẫn bằng 0, đơn hàng sẽ lỗi khóa ngoại
+                if (phienBanId == 0)
+                {
+                    throw new Exception($"Lỗi: Sản phẩm {item.XeId} trong giỏ hàng thiếu thông tin phiên bản hợp lệ.");
+                }
+
                 _context.OrderItems.Add(new OrderItem
                 {
                     DonHangId = order.Id,
                     XeId = item.XeId,
+                    PhienBanId = phienBanId,
                     CauHinhXe = item.CauHinhXe,
                     Gia = item.Gia,
                     SoLuong = item.SoLuong ?? 1
@@ -91,9 +129,15 @@ namespace Web_ban_xe_VinFast.Services.Implementations
 
         public async Task<List<OrderDto>> GetMyOrdersAsync(long userId)
         {
+            // Lấy danh sách options để map tên cho đẹp
+            var allOptions = await _context.Options.ToListAsync();
+
             return await _context.Orders
                 .Where(o => o.NguoiDungId == userId)
+                .Include(o => o.OrderItems).ThenInclude(oi => oi.Xe) // Load thêm bảng Xe
                 .Include(o => o.OrderItems)
+            .ThenInclude(oi => oi.PhienBan) // Đảm bảo đã Include PhienBan để lấy tên
+                .OrderByDescending(o => o.Id)
                 .Select(o => new OrderDto
                 {
                     Id = o.Id,
@@ -104,8 +148,11 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                     Items = o.OrderItems.Select(oi => new OrderItemDto
                     {
                         XeId = oi.XeId,
+                        // Kết hợp Tên xe + Tên phiên bản để Frontend hiển thị cho đẹp
+                        MauXe = $"{oi.Xe.MauXe} - {oi.PhienBan.TenPhienBan}",
                         CauHinhXe = oi.CauHinhXe,
-                        Gia = oi.Gia
+                        Gia = oi.Gia,
+                        SoLuong = oi.SoLuong ?? 1
                     }).ToList()
                 })
                 .ToListAsync();
@@ -237,9 +284,9 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                     // Tìm sản phẩm trong kho của đại lý dựa trên Xe và Phiên bản
                     // Lưu ý: item.PhienBanId cần được lưu từ lúc khách thêm vào giỏ hàng
                     var inventory = await _context.DealerInventories
-                        .FirstOrDefaultAsync(i => i.DaiLyId == dealerId
-                                             && i.XeId == item.XeId
-                                             /* && i.PhienBanId == item.PhienBanId */); // Mở comment này khi bạn đã thêm PhienBanId vào OrderItem
+     .FirstOrDefaultAsync(i => i.DaiLyId == dealerId
+                          && i.XeId == item.XeId
+                          && i.PhienBanId == item.PhienBanId); // BẮT BUỘC dùng PhienBanId
 
                     if (inventory != null)
                     {
@@ -281,6 +328,114 @@ namespace Web_ban_xe_VinFast.Services.Implementations
 
                 await _context.SaveChangesAsync();
             }
+        }
+
+
+
+        //tích hợp thanh toán vnpay
+        //public async Task<string> CreatePaymentUrl(long orderId, HttpContext context)
+        //{
+        //    var order = await _context.Orders.FindAsync(orderId);
+        //    if (order == null) throw new Exception("Đơn hàng không tồn tại");
+
+        //    var vnpay = new VnPayLibrary();
+        //    // 1. Thêm dữ liệu yêu cầu
+        //    vnpay.AddRequestData("vnp_Version", "2.1.0");
+        //    vnpay.AddRequestData("vnp_Command", "pay");
+        //    vnpay.AddRequestData("vnp_TmnCode", _config["Vnpay:TmnCode"]); // Lấy từ Config
+        //    vnpay.AddRequestData("vnp_Amount", ((long)(order.SoTienDatCoc * 100)).ToString());
+        //    vnpay.AddRequestData("vnp_CreateDate", DateTime.Now.ToString("yyyyMMddHHmmss"));
+        //    vnpay.AddRequestData("vnp_CurrCode", "VND");
+        //    vnpay.AddRequestData("vnp_IpAddr", context.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1");
+        //    vnpay.AddRequestData("vnp_Locale", "vn");
+        //    vnpay.AddRequestData("vnp_OrderInfo", $"Thanh toan coc xe cho don hang: {order.Id}");
+        //    vnpay.AddRequestData("vnp_OrderType", "other");
+        //    vnpay.AddRequestData("vnp_ReturnUrl", "http://localhost:3000/payment-success"); // Trang ReactJS
+        //    vnpay.AddRequestData("vnp_TxnRef", order.Id.ToString()); // ID đơn hàng để đối soát
+
+        //    // 2. Tạo URL
+        //    string paymentUrl = vnpay.CreateRequestUrl(_config["Vnpay:BaseUrl"], _config["Vnpay:HashSecret"]);
+
+        //    // 3. Lưu thông tin vào bảng Payment (Trạng thái ban đầu là Pending)
+        //    var payment = new Payment
+        //    {
+        //        DonHangId = order.Id,
+        //        SoTienThanhToan = order.SoTienDatCoc,
+        //        PhuongThucThanhToan = "VNPAY",
+        //        TrangThaiThanhToan = "Pending",
+        //        MaGiaoDich = "", // Sẽ cập nhật khi có kết quả
+        //        DuongDanThanhToan = paymentUrl,
+        //        ThoiGianTao = DateTime.UtcNow
+        //    };
+        //    _context.Payments.Add(payment);
+        //    await _context.SaveChangesAsync();
+
+        //    return paymentUrl;
+        //}
+
+        public async Task<string> CreatePaymentUrl(long orderId, HttpContext context)
+        {
+            var order = await _context.Orders.FindAsync(orderId);
+
+            // --- ĐOẠN GIẢ LẬP BẮT ĐẦU ---
+            // 1. Cập nhật trạng thái đơn hàng thành đã thanh toán ngay lập tức
+            order.TrangThaiDonHang = "Paid";
+
+            // 2. Tạo một bản ghi Payment giả
+            var payment = new Payment
+            {
+                DonHangId = orderId,
+                SoTienThanhToan = order.TongTien,
+                PhuongThucThanhToan = "VNPAY_SIMULATED",
+                TrangThaiThanhToan = "Success",
+                MaGiaoDich = "SIMULATE_" + DateTime.Now.Ticks,
+                DuongDanThanhToan = "Simulated",
+                ThoiGianTao = DateTime.Now
+            };
+            _context.Payments.Add(payment);
+            await _context.SaveChangesAsync();
+
+            // 3. Trả về thẳng link trang "Cảm ơn" hoặc "Thành công" ở Frontend của bạn
+            return "http://localhost:5173/customer/payment-success?orderId=" + orderId;
+            // --- ĐOẠN GIẢ LẬP KẾT THÚC ---
+        }
+        public async Task<bool> ProcessVnpayIpn(IQueryCollection vnpayData)
+        {
+            // Logic kiểm tra chữ ký (Checksum) từ VNPAY gửi về
+            var vnpay = new VnPayLibrary();
+            foreach (var (key, value) in vnpayData)
+            {
+                if (!string.IsNullOrEmpty(key) && key.StartsWith("vnp_"))
+                    vnpay.AddResponseData(key, value);
+            }
+
+            long orderId = Convert.ToInt64(vnpay.GetResponseData("vnp_TxnRef"));
+            string vnp_ResponseCode = vnpay.GetResponseData("vnp_ResponseCode");
+            string vnp_TransactionNo = vnpay.GetResponseData("vnp_TransactionNo");
+            // Thành dòng này:
+            bool checkSignature = vnpay.ValidateSignature(vnpayData["vnp_SecureHash"], _config["Vnpay:HashSecret"]);
+
+            if (checkSignature && vnp_ResponseCode == "00")
+            {
+                var order = await _context.Orders.FindAsync(orderId);
+                if (order != null)
+                {
+                    // Cập nhật trạng thái đơn hàng
+                    order.TrangThaiDonHang = "Paid";
+
+                    // Cập nhật bảng Payment
+                    var payment = await _context.Payments.FirstOrDefaultAsync(p => p.DonHangId == orderId);
+                    if (payment != null)
+                    {
+                        payment.TrangThaiThanhToan = "Success";
+                        payment.MaGiaoDich = vnp_TransactionNo;
+                    }
+
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

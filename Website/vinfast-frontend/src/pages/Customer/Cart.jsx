@@ -84,7 +84,7 @@ export default function Cart() {
             onClick={() => navigate('/customer/checkout')}
             className="w-full mt-6 bg-orange-300 text-black py-4 rounded-2xl text-xl font-semibold hover:bg-orange-400"
           >
-            Tiến hành thanh toán
+            Tiến hành đặt cọc
           </button>
         </div>
       )}
