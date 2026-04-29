@@ -158,6 +158,36 @@ namespace Web_ban_xe_VinFast.Services.Implementations
                 .ToListAsync();
         }
 
+        public async Task<OrderDto?> GetOrderByIdAsync(long orderId)
+        {
+            var order = await _context.Orders
+                .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Xe)
+                .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.PhienBan)
+                .FirstOrDefaultAsync(o => o.Id == orderId);
+
+            if (order == null) return null;
+
+            return new OrderDto
+            {
+                Id = order.Id,
+                TrangThaiDonHang = order.TrangThaiDonHang,
+                TongTien = order.TongTien,
+                SoTienDatCoc = order.SoTienDatCoc,
+                ThoiGianTao = order.ThoiGianTao ?? DateTime.UtcNow,
+                Items = order.OrderItems.Select(oi => new OrderItemDto
+                {
+                    XeId = oi.XeId,
+                    // Hiển thị tên xe và phiên bản
+                    MauXe = oi.PhienBan != null ? $"{oi.Xe.MauXe} - {oi.PhienBan.TenPhienBan}" : oi.Xe.MauXe,
+                    CauHinhXe = oi.CauHinhXe,
+                    Gia = oi.Gia,
+                    SoLuong = oi.SoLuong ?? 1
+                }).ToList()
+            };
+        }
+
         // === DEALER STAFF METHODS ===
         public async Task<List<DealerOrderDto>> GetDealerOrdersAsync(long dealerId, string? status)
         {
@@ -332,110 +362,88 @@ namespace Web_ban_xe_VinFast.Services.Implementations
 
 
 
-        //tích hợp thanh toán vnpay
+        
+
         //public async Task<string> CreatePaymentUrl(long orderId, HttpContext context)
         //{
         //    var order = await _context.Orders.FindAsync(orderId);
-        //    if (order == null) throw new Exception("Đơn hàng không tồn tại");
+        //    if (order == null) throw new Exception("Không tìm thấy đơn hàng");
 
+        //    // 1. Khởi tạo thư viện VNPAY
         //    var vnpay = new VnPayLibrary();
-        //    // 1. Thêm dữ liệu yêu cầu
-        //    vnpay.AddRequestData("vnp_Version", "2.1.0");
+
+        //    // 2. Thêm dữ liệu yêu cầu thanh toán (Các tham số này lấy từ file cấu hình appsettings.json)
+        //    vnpay.AddRequestData("vnp_Version", VnPayLibrary.VERSION);
         //    vnpay.AddRequestData("vnp_Command", "pay");
-        //    vnpay.AddRequestData("vnp_TmnCode", _config["Vnpay:TmnCode"]); // Lấy từ Config
+        //    vnpay.AddRequestData("vnp_TmnCode", _config["Vnpay:TmnCode"]);
+        //    // Số tiền thanh toán (VNPAY tính theo đơn vị Đồng, cần nhân 100)
         //    vnpay.AddRequestData("vnp_Amount", ((long)(order.SoTienDatCoc * 100)).ToString());
         //    vnpay.AddRequestData("vnp_CreateDate", DateTime.Now.ToString("yyyyMMddHHmmss"));
         //    vnpay.AddRequestData("vnp_CurrCode", "VND");
-        //    vnpay.AddRequestData("vnp_IpAddr", context.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1");
+        //    vnpay.AddRequestData("vnp_IpAddr", Utils.GetIpAddress(context));
         //    vnpay.AddRequestData("vnp_Locale", "vn");
-        //    vnpay.AddRequestData("vnp_OrderInfo", $"Thanh toan coc xe cho don hang: {order.Id}");
+        //    vnpay.AddRequestData("vnp_OrderInfo", "Thanh toan coc xe VinFast: " + order.Id);
         //    vnpay.AddRequestData("vnp_OrderType", "other");
-        //    vnpay.AddRequestData("vnp_ReturnUrl", "http://localhost:3000/payment-success"); // Trang ReactJS
-        //    vnpay.AddRequestData("vnp_TxnRef", order.Id.ToString()); // ID đơn hàng để đối soát
+        //    vnpay.AddRequestData("vnp_ReturnUrl", _config["Vnpay:ReturnUrl"]);
+        //    vnpay.AddRequestData("vnp_TxnRef", order.Id.ToString()); // Mã tham chiếu của hệ thống mình
 
-        //    // 2. Tạo URL
+        //    // 3. Tạo URL thanh toán
         //    string paymentUrl = vnpay.CreateRequestUrl(_config["Vnpay:BaseUrl"], _config["Vnpay:HashSecret"]);
 
-        //    // 3. Lưu thông tin vào bảng Payment (Trạng thái ban đầu là Pending)
+        //    // 4. Lưu thông tin payment vào DB với trạng thái "Pending"
         //    var payment = new Payment
         //    {
-        //        DonHangId = order.Id,
+        //        DonHangId = orderId,
         //        SoTienThanhToan = order.SoTienDatCoc,
         //        PhuongThucThanhToan = "VNPAY",
         //        TrangThaiThanhToan = "Pending",
-        //        MaGiaoDich = "", // Sẽ cập nhật khi có kết quả
+        //        MaGiaoDich = "", // Sẽ cập nhật khi VNPAY gọi lại IPN
         //        DuongDanThanhToan = paymentUrl,
-        //        ThoiGianTao = DateTime.UtcNow
+        //        ThoiGianTao = DateTime.Now
         //    };
+
         //    _context.Payments.Add(payment);
         //    await _context.SaveChangesAsync();
 
         //    return paymentUrl;
         //}
+        //public async Task<bool> ProcessVnpayIpn(IQueryCollection vnpayData)
+        //{
+        //    // Logic kiểm tra chữ ký (Checksum) từ VNPAY gửi về
+        //    var vnpay = new VnPayLibrary();
+        //    foreach (var (key, value) in vnpayData)
+        //    {
+        //        if (!string.IsNullOrEmpty(key) && key.StartsWith("vnp_"))
+        //            vnpay.AddResponseData(key, value);
+        //    }
 
-        public async Task<string> CreatePaymentUrl(long orderId, HttpContext context)
-        {
-            var order = await _context.Orders.FindAsync(orderId);
+        //    long orderId = Convert.ToInt64(vnpay.GetResponseData("vnp_TxnRef"));
+        //    string vnp_ResponseCode = vnpay.GetResponseData("vnp_ResponseCode");
+        //    string vnp_TransactionNo = vnpay.GetResponseData("vnp_TransactionNo");
+        //    // Thành dòng này:
+        //    bool checkSignature = vnpay.ValidateSignature(vnpayData["vnp_SecureHash"], _config["Vnpay:HashSecret"]);
 
-            // --- ĐOẠN GIẢ LẬP BẮT ĐẦU ---
-            // 1. Cập nhật trạng thái đơn hàng thành đã thanh toán ngay lập tức
-            order.TrangThaiDonHang = "Paid";
+        //    if (checkSignature && vnp_ResponseCode == "00")
+        //    {
+        //        var order = await _context.Orders.FindAsync(orderId);
+        //        if (order != null)
+        //        {
+        //            // Cập nhật trạng thái đơn hàng
+        //            order.TrangThaiDonHang = "Paid";
 
-            // 2. Tạo một bản ghi Payment giả
-            var payment = new Payment
-            {
-                DonHangId = orderId,
-                SoTienThanhToan = order.TongTien,
-                PhuongThucThanhToan = "VNPAY_SIMULATED",
-                TrangThaiThanhToan = "Success",
-                MaGiaoDich = "SIMULATE_" + DateTime.Now.Ticks,
-                DuongDanThanhToan = "Simulated",
-                ThoiGianTao = DateTime.Now
-            };
-            _context.Payments.Add(payment);
-            await _context.SaveChangesAsync();
+        //            // Cập nhật bảng Payment
+        //            var payment = await _context.Payments.FirstOrDefaultAsync(p => p.DonHangId == orderId);
+        //            if (payment != null)
+        //            {
+        //                payment.TrangThaiThanhToan = "Success";
+        //                payment.MaGiaoDich = vnp_TransactionNo;
+        //            }
 
-            // 3. Trả về thẳng link trang "Cảm ơn" hoặc "Thành công" ở Frontend của bạn
-            return "http://localhost:5173/customer/payment-success?orderId=" + orderId;
-            // --- ĐOẠN GIẢ LẬP KẾT THÚC ---
-        }
-        public async Task<bool> ProcessVnpayIpn(IQueryCollection vnpayData)
-        {
-            // Logic kiểm tra chữ ký (Checksum) từ VNPAY gửi về
-            var vnpay = new VnPayLibrary();
-            foreach (var (key, value) in vnpayData)
-            {
-                if (!string.IsNullOrEmpty(key) && key.StartsWith("vnp_"))
-                    vnpay.AddResponseData(key, value);
-            }
-
-            long orderId = Convert.ToInt64(vnpay.GetResponseData("vnp_TxnRef"));
-            string vnp_ResponseCode = vnpay.GetResponseData("vnp_ResponseCode");
-            string vnp_TransactionNo = vnpay.GetResponseData("vnp_TransactionNo");
-            // Thành dòng này:
-            bool checkSignature = vnpay.ValidateSignature(vnpayData["vnp_SecureHash"], _config["Vnpay:HashSecret"]);
-
-            if (checkSignature && vnp_ResponseCode == "00")
-            {
-                var order = await _context.Orders.FindAsync(orderId);
-                if (order != null)
-                {
-                    // Cập nhật trạng thái đơn hàng
-                    order.TrangThaiDonHang = "Paid";
-
-                    // Cập nhật bảng Payment
-                    var payment = await _context.Payments.FirstOrDefaultAsync(p => p.DonHangId == orderId);
-                    if (payment != null)
-                    {
-                        payment.TrangThaiThanhToan = "Success";
-                        payment.MaGiaoDich = vnp_TransactionNo;
-                    }
-
-                    await _context.SaveChangesAsync();
-                    return true;
-                }
-            }
-            return false;
-        }
+        //            await _context.SaveChangesAsync();
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }

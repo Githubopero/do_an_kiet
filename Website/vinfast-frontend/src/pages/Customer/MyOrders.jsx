@@ -67,7 +67,7 @@ export default function MyOrders() {
                       order.trangThaiDonHang === 'Paid' ? 'bg-blue-100 text-blue-700' : 
                       order.trangThaiDonHang === 'Confirmed' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'
                     }`}>
-                      {order.trangThaiDonHang === 'Paid' ? 'Đã thanh toán cọc' : 
+                      {order.trangThaiDonHang === 'Paid' ? 'Đã đặt cọc' : 
                        order.trangThaiDonHang === 'Confirmed' ? 'Đã xác nhận' : order.trangThaiDonHang}
                     </span>
                   </div>

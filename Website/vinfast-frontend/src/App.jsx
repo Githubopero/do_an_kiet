@@ -16,7 +16,7 @@ import CarDetail from './pages/Public/CarDetail';
 // Customer Pages
 import Cars from './pages/Customer/Cars';
 import Cart from './pages/Customer/Cart';
-import Checkout from './pages/Customer/Checkout';
+import CheckoutPage from './pages/Customer/CheckoutPage';
 import MyOrders from './pages/Customer/MyOrders';
 import Consultation from './pages/customer/Consultation'; // Điều chỉnh đường dẫn cho đúng với thư mục của bạn
 // THÊM DÒNG NÀY (Đảm bảo đúng đường dẫn file BookAppointment bạn đã tạo)
@@ -24,7 +24,11 @@ import BookAppointment from './pages/customer/BookAppointment';
 import CompareCars from './pages/customer/CompareCars';
 import ChatGPT from './pages/customer/ChatGPT';
 // import PaymentCallback from './pages/Customer/PaymentCallback'; 
-import PaymentSuccess from './pages/Customer/PaymentSuccess';
+// import PaymentSuccess from './pages/Customer/PaymentSuccess';
+
+// THÊM IMPORT NÀY - Trang kết quả thanh toán VNPAY
+import PaymentResultPage from './pages/Customer/PaymentResultPage';   // ← Đường dẫn này quan trọng
+
 
 // Dealer Pages
 import DealerOrders from './pages/Dealer/Orders';
@@ -64,13 +68,13 @@ function App() {
           }>
             <Route index element={<Cars />} />
             <Route path="cart" element={<Cart />} />
-            <Route path="checkout" element={<Checkout />} />
+            <Route path="checkout" element={<CheckoutPage />} />
             <Route path="orders" element={<MyOrders />} />
             
             {/* THÊM DÒNG NÀY: Route xử lý sau khi thanh toán VNPAY */}
   {/* <Route path="payment-success" element={<PaymentCallback />} /> */}
   {/* Thêm route mới này vào */}
-  <Route path="payment-success" element={<PaymentSuccess />} />
+  {/* <Route path="payment-success" element={<PaymentSuccess />} /> */}
 
             <Route path="consultation" element={<Consultation />} />
             {/* THÊM DÒNG NÀY: Route cho khách hàng đặt lịch */}
@@ -78,6 +82,10 @@ function App() {
             <Route path="compare" element={<CompareCars />} />
             {/* THÊM DÒNG NÀY: Route cho AI Tư vấn */}
             <Route path="ai-consultant" element={<ChatGPT />} />
+
+            {/* ==================== ROUTE VNPAY - QUAN TRỌNG ==================== */}
+            {/* Route này sẽ nhận kết quả từ VNPAY redirect về */}
+            <Route path="payment-result" element={<PaymentResultPage />} />
             
           </Route>
 

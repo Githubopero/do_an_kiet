@@ -8,6 +8,8 @@ namespace Web_ban_xe_VinFast.Services.Interfaces
         Task<OrderDto> CreateOrderFromCartAsync(long userId, CheckoutRequest req);
         Task<bool> SaveCustomerInfoAsync(long userId, CustomerInfoRequest req);
         Task<List<OrderDto>> GetMyOrdersAsync(long userId);
+        // THÊM DÒNG NÀY:
+        Task<OrderDto?> GetOrderByIdAsync(long orderId);
 
         // DealerStaff
         Task<List<DealerOrderDto>> GetDealerOrdersAsync(long dealerId, string? status);
@@ -16,7 +18,7 @@ namespace Web_ban_xe_VinFast.Services.Interfaces
 
 
         //tích hợp thanh toán vnpay
-        Task<string> CreatePaymentUrl(long orderId, HttpContext context);
-        Task<bool> ProcessVnpayIpn(IQueryCollection vnpayData);
+        //Task<string> CreatePaymentUrl(long orderId, HttpContext context);
+        //Task<bool> ProcessVnpayIpn(IQueryCollection vnpayData);
     }
 }

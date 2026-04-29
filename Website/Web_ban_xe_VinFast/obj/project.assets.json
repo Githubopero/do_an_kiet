@@ -3110,11 +3110,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\my pc\\Desktop\\Đồ án\\Website1\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
+      "projectUniqueName": "C:\\Users\\my pc\\Desktop\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
       "projectName": "Web_ban_xe_VinFast",
-      "projectPath": "C:\\Users\\my pc\\Desktop\\Đồ án\\Website1\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
+      "projectPath": "C:\\Users\\my pc\\Desktop\\Website\\Web_ban_xe_VinFast\\Web_ban_xe_VinFast.csproj",
       "packagesPath": "C:\\Users\\my pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\my pc\\Desktop\\Đồ án\\Website1\\Web_ban_xe_VinFast\\obj\\",
+      "outputPath": "C:\\Users\\my pc\\Desktop\\Website\\Web_ban_xe_VinFast\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

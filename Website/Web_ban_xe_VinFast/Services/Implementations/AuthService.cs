@@ -63,7 +63,7 @@ namespace Web_ban_xe_VinFast.Services.Implementations
             }
 
             if (user.TrangThaiTaiKhoan == "LOCKED")
-                return new AuthResponse { Success = false, Message = "Tài khoản đang bị khóa. Vui lòng thử lại sau 5 phút." };
+                return new AuthResponse { Success = false, Message = "Tài khoản đang bị khóa do nhập mật khẩu sai quá 5 lần!" };
 
             user.SoLanNhapSai = 0;
             await _context.SaveChangesAsync();

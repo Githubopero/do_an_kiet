@@ -17,7 +17,6 @@ export default function ConsultationManagement() {
 
   const loadConsultations = () => {
     api.get('/dealer/consultations').then(res => {
-      // Mặc định ID mới nhất lên đầu
       const data = res.data.sort((a, b) => b.id - a.id);
       setConsultations(data);
     });
@@ -62,43 +61,49 @@ export default function ConsultationManagement() {
   }, [consultations, searchTerm, filterStatus, filterPriority]);
 
   return (
-    <div className="p-6">
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-800">Quản lý yêu cầu tư vấn</h1>
-        <div className="text-sm bg-blue-50 text-blue-700 px-4 py-2 rounded-lg border border-blue-100">
-          Tổng số: <strong>{filteredData.length}</strong> yêu cầu
+    <div className="space-y-6">
+      {/* Header Section */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <h1 className="text-3xl font-black text-gray-800 tracking-tight">Quản lý yêu cầu tư vấn</h1>
+        </div>
+        <div className="text-sm bg-blue-50 text-blue-700 px-5 py-2.5 rounded-2xl border border-blue-100 font-bold shadow-sm">
+          Tổng số: <span className="text-lg">{filteredData.length}</span> yêu cầu
         </div>
       </div>
 
-      {/* Bộ lọc nâng cao */}
-      <div className="bg-white p-6 rounded-2xl shadow-sm mb-6 border border-gray-100 grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="md:col-span-2">
-          <label className="block text-xs font-bold text-gray-400 uppercase mb-1">Tìm kiếm khách hàng/mẫu xe</label>
-          <input 
-            type="text" 
-            placeholder="Tên, SĐT, Email, Mẫu xe..."
-            className="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-orange-200"
-            value={searchTerm}
-            onChange={e => setSearchTerm(e.target.value)}
-          />
+      {/* Bộ lọc nâng cao - Responsive Grid */}
+      <div className="bg-white p-5 rounded-[2rem] shadow-sm border border-gray-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="sm:col-span-2">
+          <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 ml-1">Tìm kiếm khách hàng/mẫu xe</label>
+          <div className="relative">
+            <input 
+              type="text" 
+              placeholder="Tên, SĐT, Email, Mẫu xe..."
+              className="w-full p-3 pl-10 border border-gray-100 bg-gray-50 rounded-2xl outline-none focus:ring-2 focus:ring-orange-200 transition-all font-medium text-sm"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+            />
+            <svg className="w-4 h-4 absolute left-4 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
         </div>
         <div>
-          <label className="block text-xs font-bold text-gray-400 uppercase mb-1">Trạng thái</label>
+          <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 ml-1">Trạng thái</label>
           <select 
-            className="w-full p-3 border rounded-xl"
+            className="w-full p-3 border border-gray-100 bg-gray-50 rounded-2xl text-sm font-bold outline-none cursor-pointer"
             value={filterStatus}
             onChange={e => setFilterStatus(e.target.value)}
           >
             <option value="">Tất cả trạng thái</option>
-            <option value="New">Mới</option>
+            <option value="New">Mới tiếp nhận</option>
             <option value="InProgress">Đang xử lý</option>
             <option value="Resolved">Đã giải quyết</option>
           </select>
         </div>
         <div>
-          <label className="block text-xs font-bold text-gray-400 uppercase mb-1">Mức ưu tiên</label>
+          <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 ml-1">Mức ưu tiên</label>
           <select 
-            className="w-full p-3 border rounded-xl"
+            className="w-full p-3 border border-gray-100 bg-gray-50 rounded-2xl text-sm font-bold outline-none cursor-pointer"
             value={filterPriority}
             onChange={e => setFilterPriority(e.target.value)}
           >
@@ -109,78 +114,97 @@ export default function ConsultationManagement() {
         </div>
       </div>
 
-      {/* Bảng danh sách */}
-      <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
-        <table className="w-full text-sm text-left">
-          <thead className="bg-orange-300 text-black">
-            <tr>
-              <th className="p-4 cursor-pointer hover:bg-orange-400" onClick={toggleSort}>
-                ID {sortOrder === 'desc' ? '▼' : '▲'}
-              </th>
-              <th className="p-4">Khách hàng</th>
-              <th className="p-4">Mẫu xe quan tâm</th>
-              <th className="p-4">Nội dung yêu cầu</th>
-              <th className="p-4">Mức độ ưu tiên</th>
-              <th className="p-4 text-center">Trạng thái</th>
-              <th className="p-4 text-center">Thao tác</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.map((item) => (
-              <tr key={item.id} className="border-t hover:bg-orange-50 transition-colors">
-                <td className="p-4 font-mono text-gray-400">#{item.id}</td>
-                <td className="p-4">
-                  <div className="font-bold text-blue-900">{item.hoTen}</div>
-                  <div className="text-xs text-gray-500">{item.soDienThoai}</div>
-                  <div className="text-[10px] text-gray-400 italic">{item.email}</div>
-                </td>
-                <td className="p-4 font-semibold text-orange-600 uppercase text-xs">
-                  {item.mauXeQuanTam}
-                </td>
-                <td className="p-4 max-w-xs truncate" title={item.noiDung}>
-                  {item.noiDung}
-                </td>
-                <td className="p-4 text-center">
-                  {item.mucDoUuTien === 'HIGH' ? (
-                    <span className="bg-red-100 text-red-600 px-2 py-1 rounded text-[10px] font-black">Ưu tiên cao</span>
-                  ) : (
-                    <span className="bg-green-100 text-green-600 px-2 py-1 rounded text-[10px] font-black">Thông thường</span>
-                  )}
-                </td>
-                <td className="p-4 text-center">
-                  <span className={`px-3 py-1 rounded-full text-[10px] font-bold 
-                    ${item.trangThaiXyLy === 'New' ? 'bg-blue-100 text-blue-600' : 
-                      item.trangThaiXyLy === 'InProgress' ? 'bg-yellow-100 text-yellow-600' : 
-                      'bg-green-100 text-green-600'}`}>
-                    {item.trangThaiXyLy}
-                  </span>
-                </td>
-                <td className="p-4 text-center">
-                  <button 
-                    onClick={() => setEditingItem(item)}
-                    className="p-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 font-bold"
-                  >
-                    Xử lý
-                  </button>
-                </td>
+      {/* Bảng danh sách - Scrollable Container */}
+      <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left min-w-[1000px]">
+            <thead className="bg-orange-300 text-black">
+              <tr>
+                <th className="p-5 font-black uppercase tracking-widest text-xs cursor-pointer hover:bg-orange-400 transition-colors" onClick={toggleSort}>
+                  ID {sortOrder === 'desc' ? '▼' : '▲'}
+                </th>
+                <th className="p-5 font-black uppercase tracking-widest text-xs">Khách hàng</th>
+                <th className="p-5 font-black uppercase tracking-widest text-xs">Mẫu xe quan tâm</th>
+                <th className="p-5 font-black uppercase tracking-widest text-xs">Nội dung yêu cầu</th>
+                <th className="p-5 font-black uppercase tracking-widest text-xs text-center">Ưu tiên</th>
+                <th className="p-5 font-black uppercase tracking-widest text-xs text-center">Trạng thái</th>
+                <th className="p-5 font-black uppercase tracking-widest text-xs text-center">Thao tác</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-gray-50">
+              {filteredData.map((item) => (
+                <tr key={item.id} className="hover:bg-orange-50/50 transition-colors">
+                  <td className="p-5 font-mono text-gray-400 font-bold">#{item.id}</td>
+                  <td className="p-5">
+                    <div className="font-black text-blue-900 uppercase tracking-tight">{item.hoTen}</div>
+                    <div className="text-xs text-gray-500 font-bold">{item.soDienThoai}</div>
+                    <div className="text-[10px] text-gray-400 italic font-medium">{item.email}</div>
+                  </td>
+                  <td className="p-5">
+                    <span className="inline-block px-3 py-1 bg-orange-50 text-orange-600 rounded-lg font-black text-[10px] uppercase border border-orange-100">
+                      {item.mauXeQuanTam}
+                    </span>
+                  </td>
+                  <td className="p-5 max-w-xs">
+                    <p className="truncate text-gray-600 leading-relaxed font-medium" title={item.noiDung}>
+                      {item.noiDung}
+                    </p>
+                  </td>
+                  <td className="p-5 text-center">
+                    {item.mucDoUuTien === 'HIGH' ? (
+                      <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-[9px] font-black uppercase shadow-sm border border-red-200">Ưu tiên cao</span>
+                    ) : (
+                      <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-[9px] font-black uppercase shadow-sm border border-green-200">Thông thường</span>
+                    )}
+                  </td>
+                  <td className="p-5 text-center">
+                    <span className={`px-4 py-1.5 rounded-xl text-[10px] font-black uppercase shadow-sm border
+                      ${item.trangThaiXyLy === 'New' ? 'bg-blue-50 text-blue-600 border-blue-100' : 
+                        item.trangThaiXyLy === 'InProgress' ? 'bg-yellow-50 text-yellow-600 border-yellow-100' : 
+                        'bg-emerald-50 text-emerald-600 border-emerald-100'}`}>
+                      {item.trangThaiXyLy}
+                    </span>
+                  </td>
+                  <td className="p-5 text-center">
+                    <button 
+                      onClick={() => setEditingItem(item)}
+                      className="px-5 py-2 bg-white border-2 border-blue-600 text-blue-600 rounded-xl hover:bg-blue-600 hover:text-white transition-all font-black text-[11px] uppercase shadow-lg shadow-blue-50 active:scale-95"
+                    >
+                      Xử lý
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {filteredData.length === 0 && (
+          <div className="p-20 text-center">
+             <p className="text-gray-400 italic font-bold uppercase tracking-widest">Không tìm thấy yêu cầu phù hợp.</p>
+          </div>
+        )}
       </div>
 
-      {/* Modal xử lý yêu cầu */}
+      {/* Modal xử lý yêu cầu - Responsive Modal */}
       {editingItem && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white p-8 rounded-3xl max-w-md w-full shadow-2xl">
-            <h2 className="text-2xl font-bold mb-2 text-blue-800">Xử lý yêu cầu #{editingItem.id}</h2>
-            <p className="text-gray-500 text-sm mb-6">Khách hàng: <span className="font-bold">{editingItem.hoTen}</span></p>
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[110] p-4">
+          <div className="bg-white p-6 md:p-8 rounded-[2.5rem] max-w-md w-full shadow-2xl animate-in zoom-in duration-200">
+            <div className="mb-6">
+                <h2 className="text-2xl font-black text-blue-900 uppercase tracking-tight">Xử lý yêu cầu #{editingItem.id}</h2>
+                <div className="h-1.5 w-20 bg-orange-400 rounded-full mt-2"></div>
+            </div>
             
-            <form onSubmit={handleUpdate} className="space-y-6">
+            <div className="bg-gray-50 p-4 rounded-2xl mb-6 space-y-1">
+                <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Khách hàng</p>
+                <p className="font-bold text-gray-800 text-lg">{editingItem.hoTen}</p>
+                <p className="text-sm text-gray-500 italic">"{editingItem.noiDung}"</p>
+            </div>
+            
+            <form onSubmit={handleUpdate} className="space-y-5">
               <div>
-                <label className="block text-sm font-bold mb-2">Mức độ ưu tiên</label>
+                <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Mức độ ưu tiên</label>
                 <select 
-                  className="w-full border p-3 rounded-xl bg-gray-50"
+                  className="w-full border border-gray-100 p-4 rounded-2xl bg-gray-50 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-100"
                   value={editingItem.mucDoUuTien}
                   onChange={e => setEditingItem({...editingItem, mucDoUuTien: e.target.value})}
                 >
@@ -190,9 +214,9 @@ export default function ConsultationManagement() {
               </div>
 
               <div>
-                <label className="block text-sm font-bold mb-2">Trạng thái xử lý</label>
+                <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Trạng thái xử lý</label>
                 <select 
-                  className="w-full border p-3 rounded-xl bg-gray-50"
+                  className="w-full border border-gray-100 p-4 rounded-2xl bg-gray-50 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-100"
                   value={editingItem.trangThaiXyLy}
                   onChange={e => setEditingItem({...editingItem, trangThaiXyLy: e.target.value})}
                 >
@@ -202,17 +226,17 @@ export default function ConsultationManagement() {
                 </select>
               </div>
 
-              <div className="flex space-x-3 pt-4">
+              <div className="flex gap-3 pt-4">
                 <button 
                   type="button" 
                   onClick={() => setEditingItem(null)} 
-                  className="flex-1 py-3 bg-gray-100 rounded-xl font-bold"
+                  className="flex-1 py-4 bg-gray-100 text-gray-600 rounded-2xl font-black uppercase text-xs hover:bg-gray-200 transition-all"
                 >
                   Hủy
                 </button>
                 <button 
                   type="submit" 
-                  className="flex-1 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition shadow-lg"
+                  className="flex-1 py-4 bg-blue-600 text-white rounded-2xl font-black uppercase text-xs hover:bg-blue-700 transition-all shadow-xl shadow-blue-100 active:scale-95"
                 >
                   Cập nhật
                 </button>

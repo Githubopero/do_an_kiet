@@ -6,14 +6,14 @@ export default function UsersManagement() {
   const [sortOrder, setSortOrder] = useState('desc');
   const [newUser, setNewUser] = useState({ hoTen: '', email: '', soDienThoai: '', matKhau: '', confirmPassword: '', vaiTro: '' });
   const [showAddForm, setShowAddForm] = useState(false);
-  const [editingUser, setEditingUser] = useState(null); // State quản lý User đang được sửa
-
+  const [editingUser, setEditingUser] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+
   const filteredUsers = users.filter(user => 
-  user.hoTen.toLowerCase().includes(searchTerm.toLowerCase()) || 
-  user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  (user.soDienThoai && user.soDienThoai.includes(searchTerm))
-);
+    user.hoTen.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    (user.soDienThoai && user.soDienThoai.includes(searchTerm))
+  );
 
   useEffect(() => {
     fetchUsers();
@@ -22,7 +22,6 @@ export default function UsersManagement() {
   const fetchUsers = async () => {
     try {
       const res = await api.get('/admin/users');
-      // Sắp xếp ID giảm dần (người mới lên đầu)
       const sortedData = res.data.sort((a, b) => b.id - a.id);
       setUsers(sortedData);
     } catch (err) {
@@ -30,7 +29,6 @@ export default function UsersManagement() {
     }
   };
 
-  // --- LOGIC KIỂM TRA DỮ LIỆU (VALIDATION) ---
   const validateForm = () => {
     const nameRegex = /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂÂÊÔƠưăâêôơỨỪỮỰÝỲỶỸỵýỳỷỹưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ\s]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -42,11 +40,11 @@ export default function UsersManagement() {
       return false;
     }
     if (!emailRegex.test(newUser.email)) {
-      alert("Email không đúng định dạng (ví dụ: abc@gmail.com).");
+      alert("Email không đúng định dạng.");
       return false;
     }
     if (!phoneRegex.test(newUser.soDienThoai)) {
-      alert("Số điện thoại VN không hợp lệ (10 số, bắt đầu 03, 05, 07, 08, 09).");
+      alert("Số điện thoại VN không hợp lệ.");
       return false;
     }
     if (newUser.matKhau !== newUser.confirmPassword) {
@@ -60,72 +58,44 @@ export default function UsersManagement() {
     return true;
   };
 
-  // Logic Thêm người dùng
   const handleAddUser = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
     try {
-      // Loại bỏ confirmPassword trước khi gửi lên Backend
       const { confirmPassword, ...dataToSubmit } = newUser;
-      const res = await api.post('/admin/users', dataToSubmit);
+      await api.post('/admin/users', dataToSubmit);
       alert("Thêm người dùng thành công!");
       setNewUser({ hoTen: '', email: '', soDienThoai: '', matKhau: '', confirmPassword: '', vaiTro: 'Customer' });
       setShowAddForm(false);
       fetchUsers();
-    } catch (err) { // Hiển thị lỗi từ throw new Exception(...) ở Backend
-      const errorMsg = err.response?.data?.message || "Lỗi khi thêm người dùng. Email/SĐT có thể đã tồn tại.";
-      alert("Thất bại: " + errorMsg); 
+    } catch (err) {
+      alert("Thất bại: " + (err.response?.data?.message || "Lỗi khi thêm."));
     }
   };
 
-
-  // --- HÀM MỚI: XỬ LÝ CẬP NHẬT THÔNG TIN ---
   const handleUpdateUser = async (e) => {
     e.preventDefault();
-    
-    // 1. Regex kiểm tra
-    const nameRegex = /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂÂÊÔƠưăâêôơỨỪỮỰÝỲỶỸỵýỳỷỹưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ\s]+$/;
-    const phoneRegex = /^(0[3|5|7|8|9])[0-9]{8}$/;
-
-    // 2. Kiểm tra Họ tên
-    if (!nameRegex.test(editingUser.hoTen)) {
-      alert("Họ tên không được chứa số hoặc ký tự đặc biệt.");
-      return;
-    }
-    if (editingUser.hoTen.trim().split(/\s+/).length < 2) {
-      alert("Vui lòng nhập đầy đủ cả Họ và tên.");
-      return;
-    }
-    if (!phoneRegex.test(editingUser.soDienThoai)) {
-      alert("Số điện thoại không hợp lệ");
-      return;
-    }
-
     try {
       await api.put(`/admin/users/${editingUser.id}`, {
         hoTen: editingUser.hoTen,
         soDienThoai: editingUser.soDienThoai
       });
       alert("Cập nhật thông tin thành công!");
-      setEditingUser(null); // Đóng modal
-      fetchUsers(); // Tải lại danh sách
+      setEditingUser(null);
+      fetchUsers();
     } catch (err) {
       alert(err.response?.data?.message || "Lỗi cập nhật");
     }
   };
 
-  // Logic Xóa người dùng
-  const deleteUser = async (id,vaiTro) => {
-    if (vaiTro === 'Admin') {
-      alert("Không thể xóa tài khoản Admin hệ thống!");
-      return;
-    }
-    if (!window.confirm("Bạn có chắc chắn muốn xóa người dùng này? Thao tác này không thể hoàn tác!")) return;
+  const deleteUser = async (id, vaiTro) => {
+    if (vaiTro === 'Admin') return alert("Không thể xóa tài khoản Admin!");
+    if (!window.confirm("Bạn có chắc chắn muốn xóa?")) return;
     try {
       await api.delete(`/admin/users/${id}`);
       setUsers(users.filter(u => u.id !== id));
-      alert("Đã xóa người dùng thành công");
-    } catch (err) { alert("Không thể xóa người dùng này!"); }
+      alert("Đã xóa thành công");
+    } catch (err) { alert("Lỗi xóa người dùng!"); }
   };
 
   const toggleSort = () => {
@@ -138,82 +108,80 @@ export default function UsersManagement() {
     if (role === 'Admin' || !window.confirm(`Xác nhận đổi vai trò thành ${role}?`)) return;
     try {
       await api.put(`/admin/users/${id}/role`, role);
-      alert('Cập nhật vai trò thành công!');
+      alert('Thành công!');
       setUsers(users.map(u => u.id === id ? { ...u, vaiTro: role } : u));
-    } catch (error) {
-      alert('Lỗi cập nhật vai trò!');
-    }
+    } catch (error) { alert('Lỗi cập nhật vai trò!'); }
   };
 
   const updateStatus = async (id, status) => {
-    if (!window.confirm(`Xác nhận thay đổi trạng thái thành ${status}?`)) return;
+    if (!window.confirm(`Xác nhận đổi trạng thái thành ${status}?`)) return;
     try {
-      // Lưu ý: Kiểm tra endpoint chuẩn của backend cho việc cập nhật trạng thái
-      await api.put(`/admin/users/${id}/status`, status); 
-      alert('Cập nhật trạng thái thành công!');
-      // Cập nhật đúng key 'trangThaiTaiKhoan'
+      await api.put(`/admin/users/${id}/status`, status);
       setUsers(users.map(u => u.id === id ? { ...u, trangThaiTaiKhoan: status } : u));
-    } catch (error) {
-      alert('Lỗi cập nhật trạng thái!');
-    }
+      alert('Thành công!');
+    } catch (error) { alert('Lỗi cập nhật trạng thái!'); }
   };
 
   return (
-    <div className="p-6">
-      <div className="flex justify-between items-center mb-8">
-      <h1 className="text-3xl font-bold mb-8 text-gray-800">Quản lý người dùng</h1>
-      <button 
+    <div className="space-y-6">
+      {/* Tiêu đề & Nút thêm */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-800 tracking-tight">Quản lý người dùng</h1>
+        <button 
           onClick={() => setShowAddForm(!showAddForm)}
-          className="bg-orange-300 text-black px-4 py-2 rounded-lg hover:bg-orange-400 font-bold transition-all"
+          className={`px-6 py-2.5 rounded-xl font-bold transition-all shadow-sm flex items-center justify-center gap-2 ${
+            showAddForm ? "bg-gray-100 text-gray-600 hover:bg-gray-200" : "bg-orange-500 text-white hover:bg-orange-600"
+          }`}
         >
-          {showAddForm ? "Hủy bỏ" : "+ Thêm người dùng"}
+          {showAddForm ? (
+            "✕ Hủy bỏ"
+          ) : (
+            <>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Thêm người dùng
+            </>
+          )}
         </button>
       </div>
 
-
-      {/* FORM THÊM NGƯỜI DÙNG CÓ VALIDATION */}
+      {/* FORM THÊM NGƯỜI DÙNG */}
       {showAddForm && (
-        <div className="mb-8 bg-white p-6 rounded-2xl border-2 border-orange-100 shadow-sm animate-fadeIn">
-          <h3 className="text-lg font-bold mb-4 text-orange-600">Đăng ký người dùng mới</h3>
-          <form onSubmit={handleAddUser} className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
+        <div className="bg-white p-6 rounded-2xl border border-orange-200 shadow-md animate-in slide-in-from-top duration-300">
+          <h3 className="text-lg font-bold mb-6 text-orange-600 border-b border-orange-50 pb-2">Đăng ký người dùng mới</h3>
+          <form onSubmit={handleAddUser} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { label: 'Họ và tên', key: 'hoTen', type: 'text', placeholder: 'Nguyễn Văn A' },
+              { label: 'Email', key: 'email', type: 'email', placeholder: 'abc@gmail.com' },
+              { label: 'Số điện thoại', key: 'soDienThoai', type: 'tel', placeholder: '03xxxxxxxx' },
+              { label: 'Mật khẩu', key: 'matKhau', type: 'password', placeholder: '••••••' },
+              { label: 'Nhập lại mật khẩu', key: 'confirmPassword', type: 'password', placeholder: '••••••' },
+            ].map((field) => (
+              <div key={field.key}>
+                <label className="block text-sm font-semibold text-gray-600 mb-1.5">{field.label}</label>
+                <input 
+                  type={field.type}
+                  placeholder={field.placeholder}
+                  className="w-full p-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-300 outline-none transition-all"
+                  value={newUser[field.key]} 
+                  onChange={e => setNewUser({...newUser, [field.key]: e.target.value})} 
+                  required 
+                />
+              </div>
+            ))}
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Họ và tên</label>
-                <input type="text" placeholder="Họ và tên" className="p-2 border rounded-lg focus:ring-2 focus:ring-orange-300 outline-none" 
-              value={newUser.hoTen} onChange={e => setNewUser({...newUser, hoTen: e.target.value})} required />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input type="email" placeholder="Email" className="p-2 border rounded-lg focus:ring-2 focus:ring-orange-300 outline-none" 
-              value={newUser.email} onChange={e => setNewUser({...newUser, email: e.target.value})} required />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Số điện thoại</label>
-                <input type="tel" placeholder="Số điện thoại" className="p-2 border rounded-lg focus:ring-2 focus:ring-orange-300 outline-none" 
-              value={newUser.soDienThoai} onChange={e => setNewUser({...newUser, soDienThoai: e.target.value})} required />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Mật khẩu</label>
-                <input type="password" placeholder="Mật khẩu" className="p-2 border rounded-lg focus:ring-2 focus:ring-orange-300 outline-none" 
-              value={newUser.matKhau} onChange={e => setNewUser({...newUser, matKhau: e.target.value})} required />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Nhập lại mật khẩu</label>
-                <input type="password" placeholder="Nhập lại mật khẩu" className="p-2 border rounded-lg focus:ring-2 focus:ring-orange-300 outline-none" 
-              value={newUser.confirmPassword} onChange={e => setNewUser({...newUser, confirmPassword: e.target.value})} required />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Vai trò</label>
-                <select className="p-2 border rounded-lg bg-gray-50 font-semibold" value={newUser.vaiTro} onChange={e => setNewUser({...newUser, vaiTro: e.target.value})}>
-              <option value="">-Chọn vai trò-</option>
-              <option value="Customer">Customer</option>
-              <option value="DealerStaff">DealerStaff</option>
-            </select>
-              </div>
-            
-            
-            
-            <button type="submit" className="md:col-span-3 bg-orange-500 text-black py-2 rounded-lg font-bold hover:bg-orange-600 transition-colors shadow-lg">
+              <label className="block text-sm font-semibold text-gray-600 mb-1.5">Vai trò</label>
+              <select 
+                className="w-full p-2.5 border border-gray-200 rounded-xl bg-gray-50 font-medium outline-none focus:ring-2 focus:ring-orange-300"
+                value={newUser.vaiTro} 
+                onChange={e => setNewUser({...newUser, vaiTro: e.target.value})}
+                required
+              >
+                <option value="">- Chọn -</option>
+                <option value="Customer">Customer</option>
+                <option value="DealerStaff">DealerStaff</option>
+              </select>
+            </div>
+            <button type="submit" className="sm:col-span-2 lg:col-span-3 bg-orange-500 text-white py-3 rounded-xl font-bold hover:bg-orange-600 transition-all shadow-lg shadow-orange-100 mt-2">
               Xác nhận thêm người dùng
             </button>
           </form>
@@ -221,173 +189,129 @@ export default function UsersManagement() {
       )}
 
       {/* THANH TÌM KIẾM */}
-<div className="mb-6 flex items-center bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
-  <div className="relative w-full max-w-md">
-    <h2 className="text-lg font-bold mb-4 text-orange-500 flex items-center">
-          <span className="mr-2"></span> Tìm kiếm người dùng
-        </h2>
-    {/* <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-      </svg>
-    </span> */}
-    <input 
-      type="text"
-      placeholder="Tìm theo tên, email hoặc số điện thoại..."
-      className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-orange-300 transition-all"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-  </div>
-  <div className="ml-4 text-sm text-gray-500 font-medium">
-    Tìm thấy: <span className="text-orange-600">{filteredUsers.length}</span> người dùng
-  </div>
-</div>
-
-
-      <div className="bg-white rounded-2xl shadow overflow-hidden border border-gray-100">
-        <table className="w-full">
-          <thead className="bg-orange-300 text-gray-800">
-            <tr>
-              <th className="p-4 text-left cursor-pointer hover:bg-orange-400 transition-all" onClick={toggleSort}>
-                ID {sortOrder === 'desc' ? '▼' : '▲'}
-              </th>
-              <th className="p-4 text-left">Họ tên</th>
-              <th className="p-4 text-left">Email</th>
-              <th className="p-4 text-left">Số điện thoại</th>
-              <th className="p-4 text-center">Vai trò</th>
-              <th className="p-4 text-center">Trạng thái</th>
-              <th className="p-4 text-center">Hành động</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredUsers.map(user => {
-              const isAdmin = user.vaiTro === 'Admin';
-              
-              return (
-                <tr key={user.id} className="border-t hover:bg-gray-50 transition-colors">
-                  <td className="p-4 text-sm font-mono text-gray-500">#{user.id}</td>
-                  <td className="p-4 font-medium text-gray-900">{user.hoTen}</td>
-                  <td className="p-4 text-gray-600">{user.email}</td>
-                  
-                  {/* Cột Số điện thoại: Hiện tại API chưa có trường này */}
-                  <td className="p-4 text-gray-500 text-sm italic">
-                    {user.soDienThoai || 'Chưa hỗ trợ'} 
-                  </td>
-
-                  {/* Cột Vai Trò */}
-                  <td className="p-4 text-center">
-                    <div className="flex justify-center items-center">
-                      {isAdmin ? (
-                        <span className="px-3 py-1 bg-orange-300 text-black rounded text-xs font-bold uppercase">
-                          Admin
-                        </span>
-                      ) : (
-                        <select 
-                          value={user.vaiTro}
-                          onChange={(e) => updateRole(user.id, e.target.value)}
-                          className={`border rounded-lg px-2 py-1 text-sm font-semibold outline-none focus:ring-2 focus:ring-orange-200
-                            ${user.vaiTro === 'DealerStaff' ? 'bg-blue-50 text-blue-700 border-blue-200' : 'bg-gray-50 text-gray-700'}`}
-                        >
-                          <option value="Customer">Customer</option>
-                          <option value="DealerStaff">DealerStaff</option>
-                        </select>
-                      )}
-                    </div>
-                  </td>
-
-                  {/* Cột Trạng Thái - Sử dụng key trangThaiTaiKhoan */}
-                  <td className="p-4 text-center">
-                    <div className="flex justify-center items-center">
-                      <select 
-                        value={user.trangThaiTaiKhoan}
-                        onChange={(e) => updateStatus(user.id, e.target.value)}
-                        className={`border rounded-lg px-2 py-1 text-sm font-semibold outline-none focus:ring-2
-                          ${user.trangThaiTaiKhoan === 'ACTIVE' 
-                            ? 'bg-green-50 text-green-700 border-green-200 focus:ring-green-100' 
-                            : 'bg-red-50 text-red-700 border-red-200 focus:ring-red-100'}`}
-                      >
-                        <option value="ACTIVE">ACTIVE</option>
-                        <option value="LOCKED">LOCKED</option>
-                      </select>
-                    </div>
-                  </td>
-
-
-                  <td className="p-4 text-center">
-                  <div className="flex justify-center space-x-2">
-                  {/* NÚT SỬA */}
-                    <button 
-                      onClick={() => setEditingUser(user)}
-                      className="text-blue-500 hover:text-blue-700 p-2 bg-blue-50 rounded-full"
-                      title="Sửa thông tin"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                      </svg>
-                    </button>
-                  <button onClick={() => deleteUser(user.id, user.vaiTro)} className="text-red-400 hover:text-red-700 transition-colors " title="Xóa người dùng">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                    </svg>
-                  </button>
-                  </div>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+      <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row md:items-center gap-4">
+        <div className="relative flex-1">
+          <input 
+            type="text"
+            placeholder="Tìm theo tên, email, SĐT..."
+            className="w-full pl-4 pr-4 py-3 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-orange-300 transition-all"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+        <div className="px-4 py-2 bg-orange-50 rounded-xl text-orange-700 font-bold text-sm whitespace-nowrap">
+          Tìm thấy: {filteredUsers.length} người dùng
+        </div>
       </div>
 
+      {/* BẢNG DỮ LIỆU */}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse min-w-[900px]">
+            <thead className="bg-orange-50 text-orange-800">
+              <tr>
+                <th className="p-4 cursor-pointer hover:bg-orange-100 transition-colors" onClick={toggleSort}>
+                  ID {sortOrder === 'desc' ? '↓' : '↑'}
+                </th>
+                <th className="p-4">Thông tin cơ bản</th>
+                <th className="p-4">Liên hệ</th>
+                <th className="p-4 text-center">Vai trò</th>
+                <th className="p-4 text-center">Trạng thái</th>
+                <th className="p-4 text-center">Hành động</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {filteredUsers.map(user => {
+                const isAdmin = user.vaiTro === 'Admin';
+                return (
+                  <tr key={user.id} className="hover:bg-gray-50/80 transition-colors">
+                    <td className="p-4 font-mono text-xs text-gray-400">#{user.id}</td>
+                    <td className="p-4">
+                      <div className="font-bold text-gray-800">{user.hoTen}</div>
+                      <div className="text-xs text-gray-500">{user.email}</div>
+                    </td>
+                    <td className="p-4 text-sm text-gray-600">
+                      {user.soDienThoai || <span className="text-gray-300 italic">Trống</span>}
+                    </td>
+                    <td className="p-4">
+                      <div className="flex justify-center">
+                        {isAdmin ? (
+                          <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-[10px] font-black uppercase tracking-widest">Admin</span>
+                        ) : (
+                          <select 
+                            value={user.vaiTro}
+                            onChange={(e) => updateRole(user.id, e.target.value)}
+                            className="text-xs font-bold border rounded-lg px-2 py-1 bg-white outline-none focus:ring-2 focus:ring-orange-100 cursor-pointer"
+                          >
+                            <option value="Customer">Customer</option>
+                            <option value="DealerStaff">DealerStaff</option>
+                          </select>
+                        )}
+                      </div>
+                    </td>
+                    <td className="p-4">
+                      <div className="flex justify-center">
+                        <select 
+                          value={user.trangThaiTaiKhoan}
+                          onChange={(e) => updateStatus(user.id, e.target.value)}
+                          className={`text-xs font-bold border rounded-lg px-2 py-1 outline-none transition-all ${
+                            user.trangThaiTaiKhoan === 'ACTIVE' ? 'bg-green-50 text-green-700 border-green-100' : 'bg-red-50 text-red-700 border-red-100'
+                          }`}
+                        >
+                          <option value="ACTIVE">ACTIVE</option>
+                          <option value="LOCKED">LOCKED</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td className="p-4">
+                      <div className="flex justify-center gap-2">
+                        <button onClick={() => setEditingUser(user)} className="p-2 text-blue-500 hover:bg-blue-50 rounded-lg transition-colors">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                        </button>
+                        <button onClick={() => deleteUser(user.id, user.vaiTro)} className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-      {/* --- MODAL SỬA THÔNG TIN --- */}
+      {/* MODAL SỬA */}
       {editingUser && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl animate-scaleIn">
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">Chỉnh sửa người dùng</h2>
-            <form onSubmit={handleUpdateUser} className="space-y-4">
+        <div className="fixed inset-0 bg-black/60 z-[110] flex items-center justify-center p-4 backdrop-blur-sm">
+          <div className="bg-white rounded-3xl p-6 md:p-8 max-w-md w-full shadow-2xl animate-in fade-in zoom-in duration-200">
+            <h2 className="text-xl font-bold mb-6 text-gray-800 flex items-center gap-2">
+              <span className="p-2 bg-orange-100 rounded-lg text-orange-600 italic">ID #{editingUser.id}</span>
+              Chỉnh sửa
+            </h2>
+            <form onSubmit={handleUpdateUser} className="space-y-5">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Họ và tên</label>
+                <label className="block text-sm font-bold text-gray-600 mb-1.5">Họ và tên</label>
                 <input 
-                  type="text" 
-                  className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-orange-300 outline-none"
-                  value={editingUser.hoTen}
-                  onChange={e => setEditingUser({...editingUser, hoTen: e.target.value})}
-                  required
+                  type="text" className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-300 outline-none transition-all"
+                  value={editingUser.hoTen} onChange={e => setEditingUser({...editingUser, hoTen: e.target.value})} required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Số điện thoại</label>
+                <label className="block text-sm font-bold text-gray-600 mb-1.5">Số điện thoại</label>
                 <input 
-                  type="tel" 
-                  className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-orange-300 outline-none"
-                  value={editingUser.soDienThoai}
-                  onChange={e => setEditingUser({...editingUser, soDienThoai: e.target.value})}
-                  required
+                  type="tel" className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-300 outline-none transition-all"
+                  value={editingUser.soDienThoai} onChange={e => setEditingUser({...editingUser, soDienThoai: e.target.value})} required
                 />
               </div>
-              <div className="pt-4 flex space-x-3">
-                <button 
-                  type="button"
-                  onClick={() => setEditingUser(null)}
-                  className="flex-1 py-3 bg-gray-100 text-gray-700 rounded-xl font-bold hover:bg-gray-200"
-                >
-                  Hủy
-                </button>
-                <button 
-                  type="submit"
-                  className="flex-1 py-3 bg-orange-500 text-white rounded-xl font-bold hover:bg-orange-600 transition-colors shadow-lg shadow-orange-200"
-                >
-                  Lưu thay đổi
-                </button>
+              <div className="flex gap-3 pt-2">
+                <button type="button" onClick={() => setEditingUser(null)} className="flex-1 py-3 bg-gray-100 text-gray-600 rounded-xl font-bold hover:bg-gray-200 transition-colors">Hủy</button>
+                <button type="submit" className="flex-1 py-3 bg-orange-500 text-white rounded-xl font-bold hover:bg-orange-600 transition-all shadow-lg shadow-orange-100">Lưu lại</button>
               </div>
             </form>
           </div>
         </div>
       )}
-
-
     </div>
   );
 }
