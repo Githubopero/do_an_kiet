@@ -19,7 +19,6 @@ import Cart from './pages/Customer/Cart';
 import CheckoutPage from './pages/Customer/CheckoutPage';
 import MyOrders from './pages/Customer/MyOrders';
 import Consultation from './pages/customer/Consultation'; // Điều chỉnh đường dẫn cho đúng với thư mục của bạn
-// THÊM DÒNG NÀY (Đảm bảo đúng đường dẫn file BookAppointment bạn đã tạo)
 import BookAppointment from './pages/customer/BookAppointment';
 import CompareCars from './pages/customer/CompareCars';
 import ChatGPT from './pages/customer/ChatGPT';
